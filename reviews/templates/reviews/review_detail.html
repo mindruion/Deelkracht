@@ -1,0 +1,47 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+{% load proposal_filters %}
+{% load fetc_filters %}
+{% load i18n %}
+{% load compare_tags %}
+{% load uil_filters %}
+
+{% block header_title %}
+    {% blocktrans with proposal=review.proposal.title %}
+        Details van besluitvorming bij aanmelding {{ proposal }}
+    {% endblocktrans %}
+    - {{ review.proposal.reference_number }} - {{ block.super }}
+{% endblock %}
+
+{% block content %}
+    <div class="uu-inner-container">
+        <div class="col-12">
+            <h2>
+                {% blocktrans with proposal=review.proposal.title %}
+                    Details van besluitvorming bij aanmelding <em>{{ proposal }}</em>
+                {% endblocktrans %}
+                - {{ review.proposal.reference_number }}
+            </h2>
+        </div>
+    </div>
+    <div class="uu-inner-container">
+
+    {% with review=review %}
+        {% include "reviews/review_detail_sidebar.html" %}
+    {% endwith %}
+    
+        <div class="col-12 col-md-9">
+            <h4>
+                {% trans "Reviewers" %}
+            </h4>
+            {% include "reviews/review_table.html" %}
+
+            {% if not review.proposal.is_pre_assessment %}
+                {% include "reviews/auto_review.html" %}
+            {% endif %}
+        </div>
+
+    </div>
+
+{% endblock %}

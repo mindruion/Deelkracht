@@ -1,0 +1,30 @@
+{% load i18n %}
+{% load fetc_filters %}
+{% load datatables %}
+
+<table class="dt w-100" data-language="{% datatables_lang %}">
+    <thead>
+        <tr>
+            <th>{% trans "Reviewer" %}</th>
+            <th>{% trans "Beslissing" %}</th>
+            <th>{% trans "Genomen op" %}</th>
+            <th>{% trans "Commentaar" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for decision in review.decision_set.all %}
+        <tr>
+            <td>{{ decision.reviewer }}</td>
+            <td>{{ decision.get_go_display|default:_("open") }}</td>
+            <td data-order="{{ decision.date_decision|date:'c' }}">{{ decision.date_decision|date:"j F Y, G:i" }}</td>
+            <td>{{ decision.comments }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% if user|is_secretary and review.stage == review.COMMISSION %}
+<a class="pure-button pure-button-primary" href="{% url 'reviews:assign' review.id %}">
+    {% trans "Verander aangestelde commissieleden" %}
+</a>
+{% endif %}

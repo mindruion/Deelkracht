@@ -1,0 +1,23 @@
+[English version below]
+
+{% block content_nl %}
+{% endblock %}
+
+Namens de FETC-GW, met de vriendelijke groeten,
+
+de FETC-GW secretaris,
+{{ secretary }}
+
+Dit is een automatisch gegenereerd bericht.
+
+~~~~~
+
+{% block content_en %}
+{% endblock %}
+
+Kind regards on behalf of the FEtC-H,
+
+the secretary of the FEtC-H,
+{{ secretary }}
+
+This message was generated automatically.

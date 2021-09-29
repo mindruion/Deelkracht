@@ -1,0 +1,9 @@
+{% extends "mail/base-internal.txt" %}
+
+{% block content %}
+Beste {{ reviewer }},
+
+Er is een {{new_or_revised}} studie ter toetsing aangeboden.
+Deze studie zal op de eerstvolgende FETC-GW vergadering besproken worden.
+Na inloggen op/bij de portal kunt u onder "Commissie => Mijn openstaande besluiten" de aanmelding inzien.
+{% endblock %}

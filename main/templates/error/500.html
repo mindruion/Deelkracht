@@ -1,0 +1,24 @@
+{% extends "base/base.html" %}
+
+{% load i18n %}
+
+{% block content %}
+    <div class="uu-inner-container">
+        <div class="col-12">
+            <h2>
+                {% trans 'Server error' %}
+            </h2>
+            <p>
+                {% blocktrans %}
+                    Er is een fout opgetreden tijdens het opvragen van deze pagina.
+                {% endblocktrans %}
+            </p>
+            <p>
+                {% blocktrans %}
+                    Blijft dit probleem aanhouden? Neem dan contact op met het technisch beheer van de portal via 
+                    <a href="mailto:labbeheer.gw@uu.nl" target="_blank">labbeheer.gw@uu.nl</a>. Maak hierbij zo veel mogelijk duidelijk wat je aan het doen was, en op welke pagina.
+                {% endblocktrans %}
+            </p>
+        </div>
+    </div>
+{% endblock %}
