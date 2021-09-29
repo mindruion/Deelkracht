@@ -25,7 +25,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 COPY ./requirements.txt /code/
 
-RUN pip install psycopg2-binary
+RUN pip install psycopg2-binary==2.8.6
 RUN pip install -r /code/requirements.txt
 RUN pip install gunicorn
 RUN pip install python-magic==0.4.15
