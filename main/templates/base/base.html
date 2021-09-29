@@ -68,7 +68,7 @@ Miauw!
                 <div class="col-xl-3 col-md-3 col-12">
                     <div class="uu-logo">
                         {% with 'main/images/logo-en.png' as header_image %}
-                            <a href="https://www.uu.nl">
+                            <a href="//{{ request.META.HTTP_HOST }}">
                                 <img src="{% static header_image %}" alt="{% trans 'uil.core:uu' %}" title="{% trans 'uil.core:uu' %}" />
                             </a>
                         {% endwith %}
@@ -124,7 +124,7 @@ Miauw!
             <div class="uu-inner-container">
                 <div class="col-10 uu-logo-footer">
                 <div class="footer-image">
-                    {% with 'main/images/logo-'|add:LANGUAGE_CODE|add:'.png' as header_image %}
+                    {% with 'main/images/logo-en.png' as header_image %}
                         <img src="{% static header_image %}" alt="{% trans 'uil.core:uu' %}" title="{% trans 'uil.core:uu' %}" />
                     {% endwith %}
                 </div>
