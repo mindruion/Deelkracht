@@ -19,8 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 SECRET_KEY = 'j8dwfg6kvg=fnfs33s0x(t&0pfe)p9$3dm943)6hvurj6@=+4j'
-DEBUG = False
-ALLOWED_HOSTS = ['0.0.0.0', 'momsmade.me']
+DEBUG = True
+ALLOWED_HOSTS = ['0.0.0.0', 'momsmade.me', '127.0.0.1']
 INTERNAL_IPS = ['127.0.0.1', 'localhost']
 WSGI_APPLICATION = 'fetc.wsgi.application'
 
@@ -100,11 +100,11 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': "django.db.backends.postgresql",
-        'NAME': "test",
-        'USER': "test",
-        'PASSWORD': "test",
-        'HOST': "db",
-        'PORT': "5436",
+        'NAME': "dctms",
+        'USER': "dctms",
+        'PASSWORD': "dctms",
+        'HOST': "localhost",
+        'PORT': "5432",
         'CONN_MAX_AGE': None
     }
 }

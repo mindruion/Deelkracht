@@ -21,3 +21,4 @@ htmlcov/
 ### Docs ###
 docs/_build/doctrees/**
 *.doctree
+fetc/settings.py
