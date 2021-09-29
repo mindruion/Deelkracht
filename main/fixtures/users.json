@@ -1,0 +1,20 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$150000$2cHjMmr7m4kj$RUnpci4IaRaAcYpRo+2+pPjdm/JgiP2A3XLnBHJxABc=",
+      "last_login": "2021-09-28T11:52:37.108Z",
+      "is_superuser": true,
+      "username": "Deelkracht",
+      "first_name": "",
+      "last_name": "",
+      "email": "test@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-08-04T12:35:30.996Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

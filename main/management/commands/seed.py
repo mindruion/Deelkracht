@@ -9,6 +9,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         call_command('loaddata', 'main/fixtures/settings.json')
         call_command('loaddata', 'main/fixtures/groups.json')
+        call_command('loaddata', 'main/fixtures/users.json')
         call_command('loaddata', 'faqs/fixtures/faqs.json')
         call_command('loaddata', 'observations/fixtures/registrations.json')
         call_command('loaddata', 'proposals/fixtures/fundings.json')

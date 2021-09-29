@@ -67,7 +67,7 @@ Miauw!
             <div class="uu-inner-container ">
                 <div class="col-xl-3 col-md-3 col-12">
                     <div class="uu-logo">
-                        {% with 'main/images/logo-'|add:LANGUAGE_CODE|add:'.png' as header_image %}
+                        {% with 'main/images/logo-en.png' as header_image %}
                             <a href="https://www.uu.nl">
                                 <img src="{% static header_image %}" alt="{% trans 'uil.core:uu' %}" title="{% trans 'uil.core:uu' %}" />
                             </a>
@@ -99,7 +99,7 @@ Miauw!
                 <span class="navbar-toggler-icon"></span>
             </button>
             <span class="uu-logo show-xs">
-                <img src="{% static 'uil.core/images/logo-header-nl.svg' %}" alt="{% trans 'uil.core:uu' %}" title="{% trans 'uil.core:uu' %}" />
+                <img src="{% static 'main/images/logo-en.png' %}" alt="{% trans 'uil.core:uu' %}" title="{% trans 'uil.core:uu' %}" />
             </span>
             {% include 'base/mainmenu.html' %}
         </nav>
@@ -123,9 +123,11 @@ Miauw!
         <footer class="container-fluid uu-container">
             <div class="uu-inner-container">
                 <div class="col-10 uu-logo-footer">
+                <div class="footer-image">
                     {% with 'main/images/logo-'|add:LANGUAGE_CODE|add:'.png' as header_image %}
                         <img src="{% static header_image %}" alt="{% trans 'uil.core:uu' %}" title="{% trans 'uil.core:uu' %}" />
                     {% endwith %}
+                </div>
                 </div>
                 {% include 'base/footermenu.html' %}
             </div>
