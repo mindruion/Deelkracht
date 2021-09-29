@@ -32,6 +32,7 @@ uu-navigation-bar {
     position: relative;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .coverimage {
@@ -42,6 +43,7 @@ uu-navigation-bar {
     overflow: hidden;
     height: 900px;
 }
+
 .uu-logo {
     height: 100px;
 }
@@ -51,9 +53,11 @@ uu-navigation-bar {
     text-decoration: none;
     padding: 0 15px;
 }
+
 .uu-navigation-bar .active a, .uu-navigation-bar .nav-item a:hover {
     color: #92c362;
 }
+
 .uu-container {
     padding-top: 10px;
     padding-bottom: 5px;
