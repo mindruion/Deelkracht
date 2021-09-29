@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 SECRET_KEY = 'j8dwfg6kvg=fnfs33s0x(t&0pfe)p9$3dm943)6hvurj6@=+4j'
 DEBUG = True
-ALLOWED_HOSTS = ['0.0.0.0', 'momsmade.me', '127.0.0.1']
+ALLOWED_HOSTS = ['0.0.0.0', 'momsmade.me', '127.0.0.1', '165.22.80.225']
 INTERNAL_IPS = ['127.0.0.1', 'localhost']
 WSGI_APPLICATION = 'fetc.wsgi.application'
 
