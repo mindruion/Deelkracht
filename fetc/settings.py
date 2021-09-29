@@ -100,11 +100,11 @@ DATABASES = {
     # },
     'default': {
         'ENGINE': "django.db.backends.postgresql",
-        'NAME': "dctms",
-        'USER': "dctms",
-        'PASSWORD': "dctms",
-        'HOST': "localhost",
-        'PORT': "5432",
+        'NAME': "test",
+        'USER': "test",
+        'PASSWORD': "test",
+        'HOST': "db",
+        'PORT': "5436",
         'CONN_MAX_AGE': None
     }
 }
