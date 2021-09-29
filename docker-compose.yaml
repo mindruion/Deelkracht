@@ -8,7 +8,7 @@ services:
       python manage.py migrate
       && python manage.py seed
       && python manage.py collectstatic --no-input
-      && gunicorn fetc.wsgi:application --workers 4 --bind 0.0.0.0:8000
+      && python manage.py  runserver 0.0.0.0:8000
       '
     volumes:
       - static_volume:/code/backend/staticfiles
