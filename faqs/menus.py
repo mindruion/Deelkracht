@@ -4,18 +4,18 @@ from menu import Menu, MenuItem
 
 help_menu = (
     MenuItem(
-        _("FETC-GW website"),
-        "http://fetc-gw.wp.hum.uu.nl/",
+        _("Deelkracht website"),
+        "http://Deelkracht.wp.hum.uu.nl/",
         open_in_new_tab=True,
     ),
     MenuItem(
         _("Reglement Algemene Kamer (AK)"),
-        "http://fetc-gw.wp.hum.uu.nl/reglement-algemene-kamer/",
+        "http://Deelkracht.wp.hum.uu.nl/reglement-algemene-kamer/",
         open_in_new_tab=True,
     ),
     MenuItem(
         _(" Reglement Linguïstiek Kamer (LK) "),
-        "http://fetc-gw.wp.hum.uu.nl/reglement-linguistiek-kamer/",
+        "http://Deelkracht.wp.hum.uu.nl/reglement-linguistiek-kamer/",
         open_in_new_tab=True,
     ),
     MenuItem(

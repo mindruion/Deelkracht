@@ -41,7 +41,7 @@ uu-navigation-bar {
     left: -15px;
     width: calc(100% + 30px);
     overflow: hidden;
-    height: 900px;
+    height: 550px;
 }
 
 .uu-logo {

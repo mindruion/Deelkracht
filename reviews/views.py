@@ -338,7 +338,7 @@ class CreateDecisionRedirectView(LoginRequiredMixin,
     
     NOTE: this view has been removed from templates to allow for multiple 
     secretaries to work without them unnecessarily creating decisions. It 
-    might be of use again in the future, but for now the FEtC-H has decided
+    might be of use again in the future, but for now the Deelkracht has decided
     to no longer require a secretary decision for every review. See PR
     #188 for details.
     """

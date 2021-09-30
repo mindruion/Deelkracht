@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='title',
-            field=models.CharField(help_text='De titel die u hier opgeeft is zichtbaar voor de FETC-GW-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.', max_length=200, verbose_name='Wat is de titel van uw studie? Deze titel zal worden gebruikt in alle formele correspondentie.'),
+            field=models.CharField(help_text='De titel die u hier opgeeft is zichtbaar voor de Deelkracht-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.', max_length=200, verbose_name='Wat is de titel van uw studie? Deze titel zal worden gebruikt in alle formele correspondentie.'),
         ),
     ]

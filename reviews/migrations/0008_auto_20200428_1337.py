@@ -13,7 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='review',
             name='continuation',
-            field=models.PositiveIntegerField(choices=[(0, 'Goedkeuring door FETC-GW'), (1, 'Revisie noodzakelijk'), (2, 'Afwijzing door FETC-GW'), (3, 'Open review met lange (4-weken) route'), (4, 'Laat opnieuw beoordelen door METC'), (5, 'Positief advies van FETC-GW, post-hoc'), (6, 'Negatief advies van FETC-GW, post-hoc')], default=0, verbose_name='Afhandeling'),
+            field=models.PositiveIntegerField(choices=[(0, 'Goedkeuring door Deelkracht'), (1, 'Revisie noodzakelijk'), (2, 'Afwijzing door Deelkracht'), (3, 'Open review met lange (4-weken) route'), (4, 'Laat opnieuw beoordelen door METC'), (5, 'Positief advies van Deelkracht, post-hoc'), (6, 'Negatief advies van Deelkracht, post-hoc')], default=0, verbose_name='Afhandeling'),
         ),
         migrations.AlterField(
             model_name='review',

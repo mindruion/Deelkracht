@@ -78,10 +78,10 @@ class Proposal(models.Model):
 
         (SUBMITTED_TO_SUPERVISOR,
          _('Opgestuurd ter beoordeling door eindverantwoordelijke')),
-        (SUBMITTED, _('Opgestuurd ter beoordeling door FETC-GW')),
+        (SUBMITTED, _('Opgestuurd ter beoordeling door Deelkracht')),
 
-        (DECISION_MADE, _('Studie is beoordeeld door FETC-GW')),
-        (WMO_DECISION_MADE, _('Studie is beoordeeld door FETC-GW')),
+        (DECISION_MADE, _('Studie is beoordeeld door Deelkracht')),
+        (WMO_DECISION_MADE, _('Studie is beoordeeld door Deelkracht')),
     )
 
     COURSE = 1
@@ -126,7 +126,7 @@ class Proposal(models.Model):
         max_length=200,
         unique=False,
         help_text=_('De titel die u hier opgeeft is zichtbaar voor de \
-FETC-GW-leden en, wanneer de studie is goedgekeurd, ook voor alle \
+Deelkracht-leden en, wanneer de studie is goedgekeurd, ook voor alle \
 medewerkers die in het archief van deze portal kijken. De titel mag niet \
 identiek zijn aan een vorige titel van een studie die u heeft ingediend.'),
     )
@@ -221,7 +221,7 @@ Zep software)'),
     is_pre_approved = models.BooleanField(
         _(
             'Heeft u formele toestemming van een ethische toetsingcommissie, '
-            'uitgezonderd deze FETC-GW commissie?'),
+            'uitgezonderd deze Deelkracht commissie?'),
         default=None,
         null=True,
         blank=True,
@@ -363,7 +363,7 @@ bij deze studie?'),
         blank=True,
         null=True,
         help_text=_('''Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke
-            sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de FETC-GW.
+            sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de Deelkracht.
             <br><br><strong>Tip</strong>: Type een aantal letters van de voornaam, achternaam, of Solis ID van
             de persoon die u toe wilt voegen in de zoekbalk hiernaast. Merk op dat het laden even kan duren.'''),
         on_delete=models.CASCADE,
@@ -544,7 +544,7 @@ onderzoek, 2005, ccmo.nl)'),
 
     metc_application = models.BooleanField(
         _('Uw studie moet beoordeeld worden door de METC, maar dient nog \
-wel bij de FETC-GW te worden geregistreerd. Is deze studie al aangemeld \
+wel bij de Deelkracht te worden geregistreerd. Is deze studie al aangemeld \
 bij een METC?'),
         default=False,
     )

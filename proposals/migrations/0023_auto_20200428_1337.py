@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='is_pre_approved',
-            field=models.BooleanField(blank=True, default=None, null=True, verbose_name='Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze FETC-GW commissie?'),
+            field=models.BooleanField(blank=True, default=None, null=True, verbose_name='Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze Deelkracht commissie?'),
         ),
         migrations.AlterField(
             model_name='proposal',

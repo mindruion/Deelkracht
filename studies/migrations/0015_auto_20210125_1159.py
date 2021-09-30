@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='documents',
             name='director_consent_declaration',
-            field=models.FileField(blank=True, help_text='If it is already signed, upload the signed declaration form. If it is not signed yet, you can upload the unsigned document and send the document when it is signed to the secretary of the FEtC-H', storage=proposals.utils.proposal_utils.OverwriteStorage(), upload_to=proposals.utils.proposal_utils.FilenameFactory('Department_Consent'), validators=[main.validators.validate_pdf_or_doc], verbose_name='Upload hier de toestemmingsverklaring van de schoolleider/hoofd van het departement (in .pdf of .doc(x)-format)'),
+            field=models.FileField(blank=True, help_text='If it is already signed, upload the signed declaration form. If it is not signed yet, you can upload the unsigned document and send the document when it is signed to the secretary of the Deelkracht', storage=proposals.utils.proposal_utils.OverwriteStorage(), upload_to=proposals.utils.proposal_utils.FilenameFactory('Department_Consent'), validators=[main.validators.validate_pdf_or_doc], verbose_name='Upload hier de toestemmingsverklaring van de schoolleider/hoofd van het departement (in .pdf of .doc(x)-format)'),
         ),
         migrations.AlterField(
             model_name='documents',

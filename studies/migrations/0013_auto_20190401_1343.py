@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='documents',
             name='director_consent_declaration',
-            field=models.FileField(blank=True, help_text='If it is already signed, upload the signed declaration form. If it is not signed yet, you can upload the unsigned document and send the document when it is signed to the secretary of the FEtC-H', upload_to='', validators=[main.validators.validate_pdf_or_doc], verbose_name='Upload hier de toestemmingsverklaring van de schoolleider/hoofd van het departement (in .pdf of .doc(x)-format)'),
+            field=models.FileField(blank=True, help_text='If it is already signed, upload the signed declaration form. If it is not signed yet, you can upload the unsigned document and send the document when it is signed to the secretary of the Deelkracht', upload_to='', validators=[main.validators.validate_pdf_or_doc], verbose_name='Upload hier de toestemmingsverklaring van de schoolleider/hoofd van het departement (in .pdf of .doc(x)-format)'),
         ),
         migrations.AlterField(
             model_name='study',
@@ -32,6 +32,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='study',
             name='passive_consent',
-            field=models.NullBooleanField(help_text='Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op <a href="https://fetc-gw.wp.hum.uu.nl/toestemmingsverklaringen/" target="_blank">de FETC-GW-website</a>.', verbose_name='Maakt u gebruik van passieve informed consent?'),
+            field=models.NullBooleanField(help_text='Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op <a href="https://Deelkracht.wp.hum.uu.nl/toestemmingsverklaringen/" target="_blank">de Deelkracht-website</a>.', verbose_name='Maakt u gebruik van passieve informed consent?'),
         ),
     ]

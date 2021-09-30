@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>studies.models module &mdash; FEtC-H 1.0 documentation</title>
+  <title>studies.models module &mdash; Deelkracht 1.0 documentation</title>
   
 
   
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> FEtC-H
+            <a href="../index.html" class="icon icon-home"> Deelkracht
           
 
           
@@ -130,7 +130,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">FEtC-H</a>
+          <a href="../index.html">Deelkracht</a>
         
       </nav>
 
@@ -448,7 +448,7 @@ The ‘requires_review’ field is used in the automatic review to tag anomalous
 <li><strong>proposal</strong> (ForeignKey to <a class="reference internal" href="proposals.models.html#proposals.models.Proposal" title="proposals.models.Proposal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Proposal</span></code></a>) – Proposal</li>
 <li><strong>informed_consent</strong> (<em>FileField</em>) – Upload hier de toestemmingsverklaring (in .pdf of .doc(x)-formaat)</li>
 <li><strong>briefing</strong> (<em>FileField</em>) – Upload hier de informatiebrief (in .pdf of .doc(x)-formaat)</li>
-<li><strong>director_consent_declaration</strong> (<em>FileField</em>) – Upload hier de toestemmingsverklaring van de schoolleider/hoofd van het departement (in .pdf of .doc(x)-format). If it is already signed, upload the signed declaration form. If it is not signed yet, you can upload the unsigned document and send the document when it is signed to the secretary of the FEtC-H</li>
+<li><strong>director_consent_declaration</strong> (<em>FileField</em>) – Upload hier de toestemmingsverklaring van de schoolleider/hoofd van het departement (in .pdf of .doc(x)-format). If it is already signed, upload the signed declaration form. If it is not signed yet, you can upload the unsigned document and send the document when it is signed to the secretary of the Deelkracht</li>
 <li><strong>director_consent_information</strong> (<em>FileField</em>) – Upload hier de informatiebrief voor de schoolleider/hoofd van het departement (in .pdf of .doc(x)-formaat)</li>
 <li><strong>parents_information</strong> (<em>FileField</em>) – Upload hier de informatiebrief voor de ouders (in .pdf of .doc(x)-formaat)</li>
 </ul>
@@ -695,7 +695,7 @@ A Study consists of participant details, experiment design and consent forms.</p
 <li><strong>has_intervention</strong> (<em>BooleanField</em>) – Interventieonderzoek</li>
 <li><strong>has_observation</strong> (<em>BooleanField</em>) – Observatieonderzoek</li>
 <li><strong>has_sessions</strong> (<em>BooleanField</em>) – Taakonderzoek en interviews</li>
-<li><strong>passive_consent</strong> (<em>NullBooleanField</em>) – Maakt u gebruik van passieve informed consent?. Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op de FETC-GW-website.</li>
+<li><strong>passive_consent</strong> (<em>NullBooleanField</em>) – Maakt u gebruik van passieve informed consent?. Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op de Deelkracht-website.</li>
 <li><strong>passive_consent_details</strong> (<em>TextField</em>) – Licht uw antwoord toe. wij willen u wijzen op het reglement, sectie 3.1 ‘d’ en ‘e’. passive consent is slechts in enkele gevallen toegestaan en draagt niet de voorkeur van de commissie.</li>
 <li><strong>sessions_number</strong> (<em>PositiveIntegerField</em>) – Hoeveel sessies met taakonderzoek zullen de deelnemers doorlopen?. Wanneer u bijvoorbeeld eerst de deelnemer een taak/aantal taken laat doen tijdens een eerste bezoek aan het lab en u laat de deelnemer nog een keer terugkomen om dezelfde taak/taken of andere taak/taken te doen, dan spreken we van twee sessies. Wanneer u meerdere taken afneemt op dezelfde dag, met pauzes daartussen, dan geldt dat toch als één sessie.</li>
 <li><strong>deception</strong> (<em>CharField</em>) – Is er binnen bovenstaand onderzoekstraject sprake van misleiding van de deelnemer?. Misleiding is het doelbewust verschaffen van inaccurate informatie over het doel en/of belangrijke aspecten van de gang van zaken tijdens de studie. Denk aan zaken als een bewust misleidende “cover story” voor het experiment; het ten onrechte suggereren dat er met andere deelnemers wordt samengewerkt; het onaangekondigd aanbieden van een cruciale geheugentaak of het geven van gefingeerde feedback. Wellicht ten overvloede: het gaat hierbij niet om fillers.</li>

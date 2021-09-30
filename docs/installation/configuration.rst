@@ -72,7 +72,7 @@ AUTH_LDAP_SERVER_URI
 --------------------
 This is the location of the LDAP you want to use. Please include the ``ldap://``.
 
-For the FEtC-H we use an ICT&Media LDAP: ``ldap://ldap.hum.uu.nl``
+For the Deelkracht we use an ICT&Media LDAP: ``ldap://ldap.hum.uu.nl``
 
 .. note::
 

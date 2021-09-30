@@ -1,7 +1,7 @@
 {% block content %}
 {% endblock %}
 
-Namens de FETC-GW, met de vriendelijke groeten,
+Namens de Deelkracht, met de vriendelijke groeten,
 
-de FETC-GW secretaris
+de Deelkracht secretaris
 {{ secretary }}

@@ -45,6 +45,6 @@ if 'debug_toolbar' in settings.INSTALLED_APPS and settings.DEBUG:
         path('__debug__/', include(debug_toolbar.urls)),
     )
 
-admin.site.site_header = 'FETC-GW'
-admin.site.site_title = 'FETC-GW administratie'
-admin.site.index_title = 'FETC-GW administratie'
+admin.site.site_header = 'Deelkracht'
+admin.site.site_title = 'Deelkracht administratie'
+admin.site.index_title = 'Deelkracht administratie'

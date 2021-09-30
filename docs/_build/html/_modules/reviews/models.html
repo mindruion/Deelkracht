@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>reviews.models &mdash; FEtC-H 1.0 documentation</title>
+  <title>reviews.models &mdash; Deelkracht 1.0 documentation</title>
   
 
   
@@ -48,7 +48,7 @@
           
 
           
-            <a href="../../index.html" class="icon icon-home"> FEtC-H
+            <a href="../../index.html" class="icon icon-home"> Deelkracht
           
 
           
@@ -102,7 +102,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../index.html">FEtC-H</a>
+          <a href="../../index.html">Deelkracht</a>
         
       </nav>
 
@@ -186,13 +186,13 @@
     <span class="n">GO_POST_HOC</span> <span class="o">=</span> <span class="mi">5</span>
     <span class="n">NO_GO_POST_HOC</span> <span class="o">=</span> <span class="mi">6</span>
     <span class="n">CONTINUATIONS</span> <span class="o">=</span> <span class="p">(</span>
-        <span class="p">(</span><span class="n">GO</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Goedkeuring door FETC-GW&#39;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="n">GO</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Goedkeuring door Deelkracht&#39;</span><span class="p">)),</span>
         <span class="p">(</span><span class="n">REVISION</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Revisie noodzakelijk&#39;</span><span class="p">)),</span>
-        <span class="p">(</span><span class="n">NO_GO</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Afwijzing door FETC-GW&#39;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="n">NO_GO</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Afwijzing door Deelkracht&#39;</span><span class="p">)),</span>
         <span class="p">(</span><span class="n">LONG_ROUTE</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Open review met lange (4-weken) route&#39;</span><span class="p">)),</span>
         <span class="p">(</span><span class="n">METC</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Laat opnieuw beoordelen door METC&#39;</span><span class="p">)),</span>
-        <span class="p">(</span><span class="n">GO_POST_HOC</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Positief advies van FETC-GW, post-hoc&#39;</span><span class="p">)),</span>
-        <span class="p">(</span><span class="n">NO_GO_POST_HOC</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Negatief advies van FETC-GW, post-hoc&#39;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="n">GO_POST_HOC</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Positief advies van Deelkracht, post-hoc&#39;</span><span class="p">)),</span>
+        <span class="p">(</span><span class="n">NO_GO_POST_HOC</span><span class="p">,</span> <span class="n">_</span><span class="p">(</span><span class="s1">&#39;Negatief advies van Deelkracht, post-hoc&#39;</span><span class="p">)),</span>
     <span class="p">)</span>
 
     <span class="n">stage</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">PositiveIntegerField</span><span class="p">(</span><span class="n">choices</span><span class="o">=</span><span class="n">STAGES</span><span class="p">,</span> <span class="n">default</span><span class="o">=</span><span class="n">SUPERVISOR</span><span class="p">)</span>

@@ -81,7 +81,7 @@ van de leraar of een ander persoon die bevoegd is?'),
         <a href="https://www.justis.nl/producten/vog/" \
         target="_blank">https://www.justis.nl/producten/vog/</a>). \
         Het is de verantwoordelijkheid van de school om hierom te vragen. \
-        De FETC-GW neemt hierin een adviserende rol en wil de onderzoekers \
+        De Deelkracht neemt hierin een adviserende rol en wil de onderzoekers \
         waarschuwen dat de school om een VOG kan vragen.'),
         null=True,
         blank=True,

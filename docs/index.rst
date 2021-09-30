@@ -2,8 +2,8 @@
 Introduction
 ############
 
-Welcome to the FEtC-H's documentation! This Django_ project allows a user to apply a research project for ethical review.
-It was custom-tailored for the `Faculty Ethics Committee - Humanities`_ (FEtC-H) of `Utrecht University`_.
+Welcome to the Deelkracht's documentation! This Django_ project allows a user to apply a research project for ethical review.
+It was custom-tailored for the `Faculty Ethics Committee - Humanities`_ (Deelkracht) of `Utrecht University`_.
 
 This documentation is meant to give (new) maintainers/developers of the codebase a general overview of the project and
 to document procedure.
@@ -28,5 +28,5 @@ Indices and tables
 * :ref:`search`
 
 .. _Django: https://www.djangoproject.com/
-.. _Faculty Ethics Committee - Humanities: https://fetc-gw.wp.hum.uu.nl
+.. _Faculty Ethics Committee - Humanities: https://Deelkracht.wp.hum.uu.nl
 .. _Utrecht University: https://www.uu.nl

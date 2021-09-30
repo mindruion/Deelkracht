@@ -101,7 +101,7 @@ continue, the researcher needs to create a **new** proposal by **copying** the o
 create revision copies).
 
 .. warning::
-    One must create a revision by making a copy! Do not let them start from scratch! Otherwise the FEtC-H cannot
+    One must create a revision by making a copy! Do not let them start from scratch! Otherwise the Deelkracht cannot
     reliably identify it as a revision.
 
 Committee review phase

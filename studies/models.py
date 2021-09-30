@@ -221,7 +221,7 @@ cadeautje.'),
 plaats daarvan de leiding van die instelling, dan maakt u gebruik van \
 passieve informed consent. U kunt de templates vinden op \
 <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" \
-target="_blank">de FETC-GW-website</a>.')),
+target="_blank">de Deelkracht-website</a>.')),
         null=True,
         blank=True,
     )
@@ -449,7 +449,7 @@ class Documents(models.Model):
         validators=[validate_pdf_or_doc],
         help_text=('If it is already signed, upload the signed declaration form. If it is not signed yet, '
                    'you can upload the unsigned document and send the document when it is signed to the'
-                   ' secretary of the FEtC-H'),
+                   ' secretary of the Deelkracht'),
         upload_to=DEPARTMENT_CONSENT_FILENAME,
         storage=OverwriteStorage(),
     )

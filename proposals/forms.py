@@ -134,7 +134,7 @@ class ProposalForm(UserKwargModelFormMixin, SoftValidationMixin,
             self.fields['supervisor'].help_text = _('Vul hier de docent van \
 de cursus in waarbinnen u deze portal moet doorlopen. De docent kan na afloop \
 de studie inkijken in de portal. De studie zal niet in het semipublieke archief \
-van het FETC-GW worden opgenomen.')
+van het Deelkracht worden opgenomen.')
 
         if self.is_pre_assessment:
             self.fields['relation'].queryset = Relation.objects.filter(
@@ -282,7 +282,7 @@ class RevisionProposalCopyForm(BaseProposalCopyForm):
         self.fields['title'].label = _('U kunt de titel van uw studie nu, '
                                        'indien nodig, wijzigen.')
         self.fields['title'].help_text = _('De titel die u hier opgeeft is '
-                                           'zichtbaar voor de FETC-GW-leden en,'
+                                           'zichtbaar voor de Deelkracht-leden en,'
                                            ' wanneer de studie is goedgekeurd,'
                                            ' ook voor alle medewerkers die in'
                                            ' het archief van deze portal '
@@ -316,7 +316,7 @@ class AmendmentProposalCopyForm(BaseProposalCopyForm):
         self.fields['title'].label = _('U kunt de titel van uw studie nu, '
                                        'indien nodig, wijzigen.')
         self.fields['title'].help_text = _('De titel die u hier opgeeft is '
-                                           'zichtbaar voor de FETC-GW-leden en,'
+                                           'zichtbaar voor de Deelkracht-leden en,'
                                            ' wanneer de studie is goedgekeurd,'
                                            ' ook voor alle medewerkers die in'
                                            ' het archief van deze portal '

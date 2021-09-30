@@ -13,6 +13,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='study',
             name='passive_consent',
-            field=models.BooleanField(blank=True, help_text='Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">de FETC-GW-website</a>.', null=True, verbose_name='Maakt u gebruik van passieve informed consent?'),
+            field=models.BooleanField(blank=True, help_text='Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">de Deelkracht-website</a>.', null=True, verbose_name='Maakt u gebruik van passieve informed consent?'),
         ),
     ]

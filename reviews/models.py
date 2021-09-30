@@ -29,13 +29,13 @@ class Review(models.Model):
     GO_POST_HOC = 5
     NO_GO_POST_HOC = 6
     CONTINUATIONS = (
-        (GO, _('Goedkeuring door FETC-GW')),
+        (GO, _('Goedkeuring door Deelkracht')),
         (REVISION, _('Revisie noodzakelijk')),
-        (NO_GO, _('Afwijzing door FETC-GW')),
+        (NO_GO, _('Afwijzing door Deelkracht')),
         (LONG_ROUTE, _('Open review met lange (4-weken) route')),
         (METC, _('Laat opnieuw beoordelen door METC')),
-        (GO_POST_HOC, _('Positief advies van FETC-GW, post-hoc')),
-        (NO_GO_POST_HOC, _('Negatief advies van FETC-GW, post-hoc')),
+        (GO_POST_HOC, _('Positief advies van Deelkracht, post-hoc')),
+        (NO_GO_POST_HOC, _('Negatief advies van Deelkracht, post-hoc')),
     )
 
     stage = models.PositiveIntegerField(choices=STAGES, default=SUPERVISOR)

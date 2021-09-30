@@ -108,7 +108,6 @@ DATABASES = {
         'CONN_MAX_AGE': None
     }
 }
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 

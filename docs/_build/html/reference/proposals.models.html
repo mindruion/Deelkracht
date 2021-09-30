@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proposals.models module &mdash; FEtC-H 1.0 documentation</title>
+  <title>proposals.models module &mdash; Deelkracht 1.0 documentation</title>
   
 
   
@@ -50,7 +50,7 @@
           
 
           
-            <a href="../index.html" class="icon icon-home"> FEtC-H
+            <a href="../index.html" class="icon icon-home"> Deelkracht
           
 
           
@@ -131,7 +131,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">FEtC-H</a>
+          <a href="../index.html">Deelkracht</a>
         
       </nav>
 
@@ -423,7 +423,7 @@
 <li><strong>reviewing_committee</strong> (ForeignKey to <code class="xref py py-class docutils literal notranslate"><span class="pre">Group</span></code>) – Door welke comissie dient deze studie te worden beoordeeld?</li>
 <li><strong>institution</strong> (ForeignKey to <a class="reference internal" href="#proposals.models.Institution" title="proposals.models.Institution"><code class="xref py py-class docutils literal notranslate"><span class="pre">Institution</span></code></a>) – Aan welk onderzoeksinstituut bent u verbonden?</li>
 <li><strong>date_start</strong> (<em>DateField</em>) – Wat is, indien bekend, de beoogde startdatum van uw studie?</li>
-<li><strong>title</strong> (<em>CharField</em>) – Wat is de titel van uw studie? deze titel zal worden gebruikt in alle formele correspondentie. De titel die u hier opgeeft is zichtbaar voor de FETC-GW-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.</li>
+<li><strong>title</strong> (<em>CharField</em>) – Wat is de titel van uw studie? deze titel zal worden gebruikt in alle formele correspondentie. De titel die u hier opgeeft is zichtbaar voor de Deelkracht-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.</li>
 <li><strong>summary</strong> (<em>TextField</em>) – Geef een duidelijke, bondige beschrijving van de onderzoeksvraag of -vragen. gebruik maximaal 200 woorden.</li>
 <li><strong>other_applicants</strong> (<em>BooleanField</em>) – Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de onderzoeksinstituten icon, ofr, ogk of uil ots?</li>
 <li><strong>other_stakeholders</strong> (<em>BooleanField</em>) – Zijn er nog andere onderzoekers bij deze studie betrokken die &lt;strong&gt;niet&lt;/strong&gt; geaffilieerd zijn aan een van de onderzoeksinstituten van de faculteit geestwetenschappen van de uu?</li>
@@ -436,7 +436,7 @@
 <li><strong>public</strong> (<em>BooleanField</em>) – Public</li>
 <li><strong>is_pre_assessment</strong> (<em>BooleanField</em>) – Is pre assessment</li>
 <li><strong>pre_assessment_pdf</strong> (<em>FileField</em>) – Upload hier uw aanvraag (in .pdf of .doc(x)-formaat)</li>
-<li><strong>is_pre_approved</strong> (<em>NullBooleanField</em>) – Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze fetc-gw commissie?</li>
+<li><strong>is_pre_approved</strong> (<em>NullBooleanField</em>) – Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze Deelkracht commissie?</li>
 <li><strong>pre_approval_institute</strong> (<em>CharField</em>) – Welk instituut heeft de studie goedgekeurd?</li>
 <li><strong>pre_approval_pdf</strong> (<em>FileField</em>) – Upload hier uw formele toestemmingsbrief van dit instituut (in .pdf of .doc(x)-formaat)</li>
 <li><strong>in_course</strong> (<em>BooleanField</em>) – Ik vul de portal in in het kader van een cursus</li>
@@ -458,7 +458,7 @@
 <li><strong>minor_revision_description</strong> (<em>TextField</em>) – Leg uit</li>
 <li><strong>relation</strong> (ForeignKey to <a class="reference internal" href="#proposals.models.Relation" title="proposals.models.Relation"><code class="xref py py-class docutils literal notranslate"><span class="pre">Relation</span></code></a>) – In welke hoedanigheid bent u betrokken bij deze studie?</li>
 <li><strong>created_by</strong> (ForeignKey to <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code>) – Created by</li>
-<li><strong>supervisor</strong> (ForeignKey to <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code>) – Eindverantwoordelijke onderzoeker. Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de FETC-GW.</li>
+<li><strong>supervisor</strong> (ForeignKey to <code class="xref py py-class docutils literal notranslate"><span class="pre">User</span></code>) – Eindverantwoordelijke onderzoeker. Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de Deelkracht.</li>
 <li><strong>parent</strong> (ForeignKey to <a class="reference internal" href="#proposals.models.Proposal" title="proposals.models.Proposal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Proposal</span></code></a>) – Te kopiëren studie. Dit veld toont enkel studies waar u zelf een medeuitvoerende bent.</li>
 <li><strong>is_revision</strong> (<em>BooleanField</em>) – Is deze studie een revisie van of amendement op een ingediende studie?</li>
 <li><strong>funding</strong> (<em>ManyToManyField</em>) – Hoe wordt dit onderzoek gefinancierd?</li>
@@ -507,7 +507,7 @@
 
 <dl class="attribute">
 <dt id="proposals.models.Proposal.STATUSES">
-<code class="descname">STATUSES</code><em class="property"> = ((1, 'Concept'), (40, 'Opgestuurd ter beoordeling door eindverantwoordelijke'), (50, 'Opgestuurd ter beoordeling door FETC-GW'), (55, 'Studie is beoordeeld door FETC-GW'), (60, 'Studie is beoordeeld door FETC-GW'))</em><a class="headerlink" href="#proposals.models.Proposal.STATUSES" title="Permalink to this definition">¶</a></dt>
+<code class="descname">STATUSES</code><em class="property"> = ((1, 'Concept'), (40, 'Opgestuurd ter beoordeling door eindverantwoordelijke'), (50, 'Opgestuurd ter beoordeling door Deelkracht'), (55, 'Studie is beoordeeld door Deelkracht'), (60, 'Studie is beoordeeld door Deelkracht'))</em><a class="headerlink" href="#proposals.models.Proposal.STATUSES" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="attribute">
@@ -752,7 +752,7 @@
 <dl class="attribute">
 <dt id="proposals.models.Proposal.is_pre_approved">
 <code class="descname">is_pre_approved</code><a class="headerlink" href="#proposals.models.Proposal.is_pre_approved" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze FETC-GW commissie?</p>
+<dd><p><strong>Model field:</strong> Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze Deelkracht commissie?</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1092,7 +1092,7 @@
 <li><strong>metc_institution</strong> (<em>CharField</em>) – Welke instelling?</li>
 <li><strong>is_medical</strong> (<em>CharField</em>) – Is de onderzoeksvraag medisch-wetenschappelijk van aard (zoals gedefinieerd door de wmo)?. De definitie van medisch-wetenschappelijk onderzoek is: Medisch-wetenschappelijk onderzoek is onderzoek dat als doel heeft het beantwoorden van een vraag op het gebied van ziekte en gezondheid (etiologie, pathogenese, verschijnselen/symptomen, diagnose, preventie, uitkomst of behandeling van ziekte), door het op systematische wijze vergaren en bestuderen van gegevens. Het onderzoek beoogt bij te dragen aan medische kennis die ook geldend is voor populaties buiten de directe onderzoekspopulatie. (CCMO-notitie, Definitie medisch-wetenschappelijk onderzoek, 2005, ccmo.nl)</li>
 <li><strong>is_behavioristic</strong> (<em>CharField</em>) – Worden de deelnemers aan een handeling onderworpen of worden hen gedragsregels opgelegd (zoals gedefinieerd door de wmo)?. Een handeling of opgelegde gedragsregel varieert tussen het afnemen van weefsel bij een deelnemer tot de deelnemer een knop/toets in laten drukken. Bij observatieonderzoek waarbij er niets van de deelnemers gevraagd wordt, deze dus uitsluitend geobserveerd worden in hun leven zoals het ook had plaatsgevonden zonder de observatie, slechts dan kan “nee” ingevuld worden.</li>
-<li><strong>metc_application</strong> (<em>BooleanField</em>) – Uw studie moet beoordeeld worden door de metc, maar dient nog wel bij de fetc-gw te worden geregistreerd. is deze studie al aangemeld bij een metc?</li>
+<li><strong>metc_application</strong> (<em>BooleanField</em>) – Uw studie moet beoordeeld worden door de metc, maar dient nog wel bij de Deelkracht te worden geregistreerd. is deze studie al aangemeld bij een metc?</li>
 <li><strong>metc_decision</strong> (<em>BooleanField</em>) – Is de metc al tot een beslissing gekomen?</li>
 <li><strong>metc_decision_pdf</strong> (<em>FileField</em>) – Upload hier de beslissing van het metc (in .pdf of .doc(x)-formaat)</li>
 <li><strong>status</strong> (<em>PositiveIntegerField</em>) – Status</li>
@@ -1186,7 +1186,7 @@
 <dl class="attribute">
 <dt id="proposals.models.Wmo.metc_application">
 <code class="descname">metc_application</code><a class="headerlink" href="#proposals.models.Wmo.metc_application" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Uw studie moet beoordeeld worden door de METC, maar dient nog wel bij de FETC-GW te worden geregistreerd. Is deze studie al aangemeld bij een METC?</p>
+<dd><p><strong>Model field:</strong> Uw studie moet beoordeeld worden door de METC, maar dient nog wel bij de Deelkracht te worden geregistreerd. Is deze studie al aangemeld bij een METC?</p>
 </dd></dl>
 
 <dl class="attribute">

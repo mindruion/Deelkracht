@@ -366,9 +366,9 @@ def notify_local_staff(proposal):
     secretary = get_secretary()
     
     if proposal.is_revision:
-        subject = _('FETC-GW: gereviseerde studie gebruikt labfaciliteiten')
+        subject = _('Deelkracht: gereviseerde studie gebruikt labfaciliteiten')
     else:
-        subject = _('FETC-GW: nieuwe studie gebruikt labfaciliteiten')
+        subject = _('Deelkracht: nieuwe studie gebruikt labfaciliteiten')
     
     params = {
         'secretary': secretary.get_full_name(),

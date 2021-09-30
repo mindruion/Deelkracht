@@ -36,7 +36,7 @@
                     {% endblocktrans %}
                     {% blocktrans %}
                         Als u er zeker van bent dat uw studie op adequate wijze is gespecifieerd kunt u de aanmelding
-                        nu ter beoordeling naar de FETC-GW versturen.
+                        nu ter beoordeling naar de Deelkracht versturen.
                     {% endblocktrans %}
 
                 {% elif proposal.relation.needs_supervisor %}
@@ -53,7 +53,7 @@
                     {% endblocktrans %}
                     {% blocktrans %}
                         Als u er zeker van bent dat uw studie op adequate wijze is gespecifieerd kunt u de aanmelding
-                        nu ter beoordeling naar de FETC-GW versturen.
+                        nu ter beoordeling naar de Deelkracht versturen.
                     {% endblocktrans %}
                 {% endif %}
             </p>
@@ -123,7 +123,7 @@
                 <table>{{ form.as_table }}</table>
                 {% if is_practice %}
                 <div class="info">
-                    {% trans "U bewerkt op het moment een oefenstudie. Deze kan niet ter beoordeling door de FETC-GW worden ingediend." %}
+                    {% trans "U bewerkt op het moment een oefenstudie. Deze kan niet ter beoordeling door de Deelkracht worden ingediend." %}
                 </div>
                 {% endif %}
                 {% if troublesome_pages or is_practice %}

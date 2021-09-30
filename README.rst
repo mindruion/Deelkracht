@@ -1,5 +1,5 @@
 ======
-FEtC-H
+Deelkracht
 ======
 
 Ethical Committee web application in Django
@@ -8,7 +8,7 @@ Introduction
 ------------
 
 This Django_ project allows a user to apply a research project for ethical review.
-It was custom-tailored for the `Faculty Ethics Committee - Humanities`_ (FEtC-H) of `Utrecht University`_.
+It was custom-tailored for the `Faculty Ethics Committee - Humanities`_ (Deelkracht) of `Utrecht University`_.
 
 Documentation
 -------------
@@ -33,6 +33,6 @@ However, since October 2016, there is a full English translation available, comp
 Translations in other languages are welcome, of course.
 
 .. _Django: https://www.djangoproject.com/
-.. _Faculty Ethics Committee - Humanities: https://fetc-gw.wp.hum.uu.nl
+.. _Faculty Ethics Committee - Humanities: https://Deelkracht.wp.hum.uu.nl
 .. _Utrecht University: https://www.uu.nl
 .. _Anna Asbury: http://www.annaasbury.com/

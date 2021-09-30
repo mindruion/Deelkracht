@@ -58,8 +58,8 @@ class ReviewTestCase(BaseReviewTestCase):
         self.assertEqual(review.decision_set.count(), 1)
 
         self.assertEqual(len(mail.outbox), 2)
-        self.assertEqual(mail.outbox[0].subject, 'FETC-GW: bevestiging indienen concept-aanmelding')
-        self.assertEqual(mail.outbox[1].subject, 'FETC-GW: beoordelen als eindverantwoordelijke')
+        self.assertEqual(mail.outbox[0].subject, 'Deelkracht: bevestiging indienen concept-aanmelding')
+        self.assertEqual(mail.outbox[1].subject, 'Deelkracht: beoordelen als eindverantwoordelijke')
 
         # If the Relation on a Proposal does not require a supervisor, a assignment review should be started.
         self.proposal.relation = Relation.objects.get(pk=5)
@@ -73,9 +73,9 @@ class ReviewTestCase(BaseReviewTestCase):
         self.assertEqual(len(mail.outbox), 4)
         self.assertEqual(
             mail.outbox[2].subject,
-            f'FETC-GW {self.proposal.reviewing_committee.name} {self.proposal.reference_number}: nieuwe studie ingediend'
+            f'Deelkracht {self.proposal.reviewing_committee.name} {self.proposal.reference_number}: nieuwe studie ingediend'
         )
-        self.assertEqual(mail.outbox[3].subject, 'FETC-GW: aanmelding ontvangen')
+        self.assertEqual(mail.outbox[3].subject, 'Deelkracht: aanmelding ontvangen')
 
 
 class SupervisorTestCase(BaseReviewTestCase):
@@ -87,8 +87,8 @@ class SupervisorTestCase(BaseReviewTestCase):
         self.assertEqual(review.go, None)
 
         self.assertEqual(len(mail.outbox), 2)
-        self.assertEqual(mail.outbox[0].subject, 'FETC-GW: bevestiging indienen concept-aanmelding')
-        self.assertEqual(mail.outbox[1].subject, 'FETC-GW: beoordelen als eindverantwoordelijke')
+        self.assertEqual(mail.outbox[0].subject, 'Deelkracht: bevestiging indienen concept-aanmelding')
+        self.assertEqual(mail.outbox[1].subject, 'Deelkracht: beoordelen als eindverantwoordelijke')
 
         decision = Decision.objects.filter(review=review)[0]
         decision.go = Decision.APPROVED
@@ -99,11 +99,11 @@ class SupervisorTestCase(BaseReviewTestCase):
         self.assertEqual(len(mail.outbox), 4)
         self.assertEqual(
             mail.outbox[2].subject,
-            f'FETC-GW {self.proposal.reviewing_committee.name} {self.proposal.reference_number}: nieuwe studie ingediend'
+            f'Deelkracht {self.proposal.reviewing_committee.name} {self.proposal.reference_number}: nieuwe studie ingediend'
         )
         self.assertEqual(
             mail.outbox[3].subject,
-            'FETC-GW: aanmelding ontvangen'
+            'Deelkracht: aanmelding ontvangen'
         )
 
 
