@@ -3,7 +3,7 @@
 {% block content_nl %}
 Beste collega,
 
-Uw aanvraag voor voortoetsing is ingediend. De Deelkracht zal haar best doen binnen één week uitsluitsel te geven. U hoort zo snel mogelijk van ons.
+Uw aanvraag voor voortoetsing is ingediend. Deelkracht zal haar best doen binnen één week uitsluitsel te geven. U hoort zo snel mogelijk van ons.
 {% endblock %}
 
 {% block content_en %}

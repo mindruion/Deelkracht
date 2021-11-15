@@ -103,7 +103,7 @@ DATABASES = {
         'NAME': "test",
         'USER': "test",
         'PASSWORD': "test",
-        'HOST': "db",
+        'HOST': "165.22.80.225",
         'PORT': "5436",
         'CONN_MAX_AGE': None
     }

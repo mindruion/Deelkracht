@@ -22,6 +22,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='supervisor',
-            field=models.ForeignKey(blank=True, help_text='Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke\n            sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de Deelkracht.\n            <br><br><strong>Tip</strong>: Type een aantal letters van de voornaam, achternaam, of Solis ID van\n            de persoon die u toe wilt voegen in de zoekbalk hiernaast. Merk op dat het laden even kan duren.', null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Eindverantwoordelijke onderzoeker'),
+            field=models.ForeignKey(blank=True, help_text='Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke\n            sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij Deelkracht.\n            <br><br><strong>Tip</strong>: Type een aantal letters van de voornaam, achternaam, of Solis ID van\n            de persoon die u toe wilt voegen in de zoekbalk hiernaast. Merk op dat het laden even kan duren.', null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Eindverantwoordelijke onderzoeker'),
         ),
     ]

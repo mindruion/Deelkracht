@@ -52,12 +52,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='supervisor',
-            field=models.ForeignKey(blank=True, help_text='Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de Deelkracht.', null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Eindverantwoordelijke onderzoeker'),
+            field=models.ForeignKey(blank=True, help_text='Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij Deelkracht.', null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='Eindverantwoordelijke onderzoeker'),
         ),
         migrations.AlterField(
             model_name='proposal',
             name='title',
-            field=models.CharField(help_text='De titel die u hier opgeeft is zichtbaar voor de Deelkracht-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.', max_length=200, unique=True, verbose_name='Wat is de titel van uw studie? Deze titel zal worden gebruikt in alle formele correspondentie.'),
+            field=models.CharField(help_text='De titel die u hier opgeeft is zichtbaar voor Deelkracht-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.', max_length=200, unique=True, verbose_name='Wat is de titel van uw studie? Deze titel zal worden gebruikt in alle formele correspondentie.'),
         ),
         migrations.AlterField(
             model_name='wmo',
@@ -67,7 +67,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='wmo',
             name='metc_application',
-            field=models.BooleanField(default=False, verbose_name='Uw studie moet beoordeeld worden door de METC, maar dient nog wel bij de Deelkracht te worden geregistreerd. Is deze studie al aangemeld bij een METC?'),
+            field=models.BooleanField(default=False, verbose_name='Uw studie moet beoordeeld worden door de METC, maar dient nog wel bij Deelkracht te worden geregistreerd. Is deze studie al aangemeld bij een METC?'),
         ),
         migrations.AddField(
             model_name='proposal',

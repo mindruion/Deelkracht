@@ -3,9 +3,9 @@
 {% block content_nl %}
 {% endblock %}
 
-Namens de Deelkracht, met de vriendelijke groeten,
+Namens Deelkracht, met de vriendelijke groeten,
 
-de Deelkracht secretaris,
+Deelkracht secretaris,
 {{ secretary }}
 
 Dit is een automatisch gegenereerd bericht.

@@ -282,7 +282,7 @@ class RevisionProposalCopyForm(BaseProposalCopyForm):
         self.fields['title'].label = _('U kunt de titel van uw studie nu, '
                                        'indien nodig, wijzigen.')
         self.fields['title'].help_text = _('De titel die u hier opgeeft is '
-                                           'zichtbaar voor de Deelkracht-leden en,'
+                                           'zichtbaar voor Deelkracht-leden en,'
                                            ' wanneer de studie is goedgekeurd,'
                                            ' ook voor alle medewerkers die in'
                                            ' het archief van deze portal '
@@ -316,7 +316,7 @@ class AmendmentProposalCopyForm(BaseProposalCopyForm):
         self.fields['title'].label = _('U kunt de titel van uw studie nu, '
                                        'indien nodig, wijzigen.')
         self.fields['title'].help_text = _('De titel die u hier opgeeft is '
-                                           'zichtbaar voor de Deelkracht-leden en,'
+                                           'zichtbaar voor Deelkracht-leden en,'
                                            ' wanneer de studie is goedgekeurd,'
                                            ' ook voor alle medewerkers die in'
                                            ' het archief van deze portal '

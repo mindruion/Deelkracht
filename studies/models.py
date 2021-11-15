@@ -221,7 +221,7 @@ cadeautje.'),
 plaats daarvan de leiding van die instelling, dan maakt u gebruik van \
 passieve informed consent. U kunt de templates vinden op \
 <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" \
-target="_blank">de Deelkracht-website</a>.')),
+target="_blank">Deelkracht-website</a>.')),
         null=True,
         blank=True,
     )

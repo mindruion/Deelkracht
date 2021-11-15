@@ -363,7 +363,7 @@ bij deze studie?'),
         blank=True,
         null=True,
         help_text=_('''Aan het einde van de procedure kunt u deze studie ter verificatie naar uw eindverantwoordelijke
-            sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij de Deelkracht.
+            sturen. De eindverantwoordelijke zal de studie vervolgens kunnen aanpassen en indienen bij Deelkracht.
             <br><br><strong>Tip</strong>: Type een aantal letters van de voornaam, achternaam, of Solis ID van
             de persoon die u toe wilt voegen in de zoekbalk hiernaast. Merk op dat het laden even kan duren.'''),
         on_delete=models.CASCADE,
@@ -544,7 +544,7 @@ onderzoek, 2005, ccmo.nl)'),
 
     metc_application = models.BooleanField(
         _('Uw studie moet beoordeeld worden door de METC, maar dient nog \
-wel bij de Deelkracht te worden geregistreerd. Is deze studie al aangemeld \
+wel bij Deelkracht te worden geregistreerd. Is deze studie al aangemeld \
 bij een METC?'),
         default=False,
     )

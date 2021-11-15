@@ -1,7 +1,7 @@
 {% block content %}
 {% endblock %}
 
-Namens de Deelkracht, met de vriendelijke groeten,
+Namens Deelkracht, met de vriendelijke groeten,
 
-de Deelkracht secretaris
+Deelkracht secretaris
 {{ secretary }}
