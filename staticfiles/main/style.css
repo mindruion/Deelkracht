@@ -390,5 +390,23 @@ a.icon-link {
 }
 
 a:hover {
-    color: white;
+    color: #92c362;
+}
+
+div.info {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #D9EDF7;
+    list-style-type: none;
+    color: #397300;
+}
+
+div.warning {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #FCF8E3;
+    list-style-type: none;
+    color: #397300;
 }
