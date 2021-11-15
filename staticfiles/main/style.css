@@ -16,10 +16,15 @@ uu-navigation-bar {
     object-fit: cover;
 }
 
-.uu-logo-footer img {
-    width: 50%;
-    height: 30%;
+.footer-image img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+.footer-image {
+    height: 100px;
+    width: 400px;
 }
 
 .coverimage img {
@@ -27,6 +32,7 @@ uu-navigation-bar {
     position: relative;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 .coverimage {
@@ -35,8 +41,9 @@ uu-navigation-bar {
     left: -15px;
     width: calc(100% + 30px);
     overflow: hidden;
-    height: 900px;
+    height: 550px;
 }
+
 .uu-logo {
     height: 100px;
 }
@@ -46,9 +53,11 @@ uu-navigation-bar {
     text-decoration: none;
     padding: 0 15px;
 }
+
 .uu-navigation-bar .active a, .uu-navigation-bar .nav-item a:hover {
     color: #92c362;
 }
+
 .uu-container {
     padding-top: 10px;
     padding-bottom: 5px;
@@ -378,4 +387,8 @@ a.icon-link {
     -webkit-border-radius: 6px 0 6px 6px;
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
+}
+
+a:hover {
+    color: white;
 }

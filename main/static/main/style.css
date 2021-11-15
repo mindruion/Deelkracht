@@ -388,3 +388,15 @@ a.icon-link {
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 }
+
+a:hover {
+    color: #92c362;
+}
+div.info {
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #D9EDF7;
+    list-style-type: none;
+    color: #397300;
+}
