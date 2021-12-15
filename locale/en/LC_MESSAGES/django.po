@@ -92,7 +92,7 @@ msgid "Feedback versturen"
 msgstr "Send feedback"
 
 #: feedback/templates/feedback/feedback_form.html:17
-msgid "Hier kunt u feedback achterlaten op het Deelkracht portal."
+msgid "Hier kunt u feedback achterlaten op het ETC-SACB portal."
 msgstr "You can leave feedback on the ETC-SACB portal here."
 
 #: feedback/templates/feedback/feedback_form.html:23
@@ -635,7 +635,7 @@ msgid "Voortgang"
 msgstr "Progress"
 
 #: main/templates/base/site_header.html:2
-msgid "Deelkracht Portal"
+msgid "ETC-SACB portal"
 msgstr "ETC-SACB portal"
 
 #: main/templates/base/site_title.html:2
@@ -788,7 +788,7 @@ msgstr ""
 #: main/templates/main/index.html:36
 msgid ""
 "\n"
-"                Deelkracht Portal is vernieuwd! We hebben ons best gedaan om "
+"                ETC-SACB portal is vernieuwd! We hebben ons best gedaan om "
 "gebruikers een mooiere en meer bruikbare portal voor te schotelen. Er kunnen "
 "echter een paar dingen tijdens de vernieuwing over het hoofd gezien zijn. "
 "Ontdek je een foutje, missende functionaliteit, of verkeerde vertaling? Help "
