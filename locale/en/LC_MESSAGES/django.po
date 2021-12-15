@@ -93,7 +93,7 @@ msgstr "Send feedback"
 
 #: feedback/templates/feedback/feedback_form.html:17
 msgid "Hier kunt u feedback achterlaten op het Deelkracht portal."
-msgstr "You can leave feedback on the Deelkracht portal here."
+msgstr "You can leave feedback on the ETC-SACB portal here."
 
 #: feedback/templates/feedback/feedback_form.html:23
 #: observations/templates/observations/observation_update_attachments.html:39
@@ -278,7 +278,7 @@ msgstr "Intervention saved"
 #: proposals/forms.py:523 proposals/forms.py:578 studies/forms.py:104
 #: studies/forms.py:115 studies/forms.py:121 tasks/forms.py:87
 msgid "Dit veld is verplicht."
-msgstr "This field is required."
+msgstr "This field is mandatory."
 
 #: main/menus.py:5 main/templates/base/menu.html:7
 #: main/templates/main/index.html:7 main/templates/main/index.html:25
@@ -636,7 +636,7 @@ msgstr "Progress"
 
 #: main/templates/base/site_header.html:2
 msgid "Deelkracht Portal"
-msgstr "Deelkracht"
+msgstr "ETC-SACB portal"
 
 #: main/templates/base/site_title.html:2
 msgid "Deelkracht"
@@ -797,7 +797,7 @@ msgid ""
 "            "
 msgstr ""
 "\n"
-"The Deelkracht portal has been upgraded! We've tried our hardest to deliver all "
+"The ETC-SACB portal has been upgraded! We've tried our hardest to deliver all "
 "users a nicer and more usable portal. As a result of this, there may be a "
 "couple of bugs and ommissions here and there. We kindly ask that you report "
 "any issues, such as a bad translation, bug, or missing functionality to <a "
@@ -1343,7 +1343,7 @@ msgstr "This field shows only approved applications in which you are involved."
 
 #: proposals/forms.py:381 proposals/forms.py:511
 msgid "Dit veld is verplicht om verder te gaan."
-msgstr "This field is required to continue."
+msgstr "This field is mandatory to continue."
 
 #: proposals/forms.py:389
 msgid "U dient een instelling op te geven."

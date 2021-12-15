@@ -9,15 +9,15 @@
 
 {% block content %}
     <div class="coverimage">
-        <img src="{% static 'main/images/main-image.jpeg' %}" />
+        <img src="{% static 'main/images/main-image.jpeg' %}"/>
     </div>
     <div class="uu-inner-container mt-1">
         <div class="col-12">
             {% for message in systemmessage_list %}
                 <div class="{{ message.css_class }}">
-                {% autoescape off %}
-                    {{ message.message }}
-                {% endautoescape %}
+                    {% autoescape off %}
+                        {{ message.message }}
+                    {% endautoescape %}
                 </div>
             {% endfor %}
             <h3>
@@ -32,154 +32,160 @@
     {% if user.is_authenticated %}
         <div class="uu-inner-container">
             <div class="col-12">
-            <p>
-            {% blocktrans %}
-                Deelkracht Portal is vernieuwd! We hebben ons best gedaan om gebruikers een mooiere en meer bruikbare portal voor te schotelen. Er kunnen echter een paar dingen tijdens de vernieuwing over het hoofd gezien zijn. Ontdek je een foutje, missende functionaliteit, of verkeerde vertaling? Help ons dan de portal te verbeteren door een mailtje te sturen naar <a href="mailto:labbeheer.gw@uu.nl">labbeheer.gw@uu.nl</a>.
-            {% endblocktrans %}
-            </p>
-                <ul>
-                <li>{% trans "Check voor het indienen:" %}
-                    <ul>
-                    <li>
-                        {% blocktrans trimmed %}
-                            De 
-                            <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">
-                            UU-webpagina van Deelkracht</a> voor nieuws en de agenda.
-                        {% endblocktrans %}
-                    </li>
-                    <li>
-                        {% blocktrans trimmed %}
-                            Het reglement van de 
-                            <a href="https://Deelkracht.wp.hum.uu.nl/reglement-algemene-kamer/" target="blank">Algemene Kamer (AK)</a>
-                            of dat van de 
-                            <a href="https://Deelkracht.wp.hum.uu.nl/reglement-linguistiek-kamer/" target="blank">Linguïstiek Kamer (LK)</a>.
-                        {% endblocktrans %}
-                    </li>
-                    </ul>
-                <li>
-                {% blocktrans trimmed %}
-                    Gebruik de juiste (meest recente) <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="blank">voorbeelddocumenten</a> voor de <em>informed consent</em>. </li>
-                {% endblocktrans %}
-                </li>
-                {% blocktrans trimmed %}
-                    <li>Voor advies over data management (plannen): <a href="mailto:datamanagement.gw@uu.nl">Frans de Liagre Böhl</a>.</li>
-                    <li>Voor advies over privacy zaken: <a href="mailto:j.w.a.degraaf@uu.nl">Joris de Graaf</a>.</li>
-                    <li>Voor vragen over de procedure: <a href="mailto:Deelkracht@uu.nl">Desiree Capel</a>.</li>
-                    <li>Voor vragen over de portal zelf: <a href="mailto:labbeheer.gw@uu.nl">labbeheer.gw@uu.nl</a>.</li>
-                {% endblocktrans %}
-                </ul>
-
                 <p>
                     {% blocktrans %}
-                        In deze portal kunt u het volgende doen:
+                        Welkom op de portal van de ETC-SACB, de ethische toetsingscommissie voor de sector auditief en
+                        communicatief beperkten. De commissie heeft haar best gedaan de portal gebruiksvriendelijk te
+                        maken. Ook is ernaar gestreefd om de portal aan te laten sluiten op de eisen en wensen van
+                        onderzoek binnen de sector auditief en communicatief beperkten.
                     {% endblocktrans %}
                 </p>
-            </div>
-        </div>
-        <div class="uu-inner-container">
-            <div class="col-md-6 col-12">
-                <h5>
-                    {% trans "Dien een nieuwe studie in" %}
-                </h5>
-{#                {% trans '(check de meest recente voorbeelddocumenten op <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">intranet</a>)' %}#}
-                <ul class="startpage-ul">
+                <p>
+                    {% blocktrans %}
+                        Elke nieuwe studie, waar gegevens over menselijk gedrag bij één of meer deelnemers worden
+                        verzameld en die onderzoekers in het kader van hun werk bij de onderzoeksafdelingen van Auris,
+                        Kentalis, of de NSDSK uitvoeren, moet vóór uitvoering bij de ETC-SACB worden aangemeld. Nieuwe
+                        studies kunnen via deze portal worden ingediend. Via de menubalk is het ook mogelijk om
+                        bijvoorbeeld het archief te raadplegen of om alle ingezonden studies te
+                        bekijken.              {% endblocktrans %}
+                </p>
+                <p>
+                    There will be 2 heads with links left. All others can be removed:
+                </p>
+                Check voor het indienen:
+                <ul>
+                    <li>De webpagina van ETC_SACB voor nieuws en de agenda</li>
+                    <li>Het reglement van de ETC-SACB</li>
                     <li>
-                        <a href="{% url 'proposals:start' %}">{% trans "die volledig nieuw is in deze portal;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:copy' %}">{% trans "op basis van een kopie van een oude studie;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:start_pre' %}">{% trans "voor voortoetsing t.b.v. subsidieaanvraag;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:start_pre_approved' %}">{% trans "die al goedgekeurd is door een andere ethische toetsingscomissie." %}</a>
-                    </li>
+                        {% blocktrans trimmed %}
+                            Of u de laatste versie van de voorbeelddocumenten voor de informed consent heeft gebruikt
+                            </li>
+                        {% endblocktrans %}
                 </ul>
-            </div>
-            <div class="col-md-6 col-12">
-                <h5>
-                    {% trans "Een gereviseerde studie aanmelden" %}
-                </h5>
-{#                {% trans '(check de meest recente voorbeelddocumenten op <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">intranet</a>)' %}#}
-                <ul class="startpage-ul">
-                    <li>
-                        <a href="{% url 'proposals:copy_revision' %}">{% trans "als een revisie, gebaseerd op opmerkingen van Deelkracht;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:copy_amendment' %}">{% trans "als amendement, wanneer de studie al goedgekeurd is door Deelkracht." %}</a>
-                    </li>
+                    Advies- en procedurele vragen:
+                <ul>
+                    {% blocktrans trimmed %}
+                        <li>Voor advies over datamanagement (plannen): Naam (Auris), Naam (Kentalis), Naam (NSDSK)</a>.
+                        </li>
+                        <li>Voor advies over privacy: Naam, (Auris), Naam, (Kentalis), Naam,(NSDSK)
+                        </li>
+                        <li>Voor vragen over de procedure van de ETC-SACB: Naam, (functie)</li>
+                        <li>Voor vragen en opmerkingen over het portal: Noortje Staal;(secretaris ETC-SACB)
+                        </li>
+                    {% endblocktrans %}
                 </ul>
-            </div>
-        </div>
-        <div class="uu-inner-container mt-2 mb-2">
-            <div class="col-md-6 col-12">
-                <h6>
-                    {% trans "Bekijk" %}
-                </h6>
-                <ul class="startpage-ul">
-                    <li>
-                        <a href="{% url 'proposals:my_concepts' %}">{% trans "mijn conceptstudies;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:my_practice' %}">{% trans "mijn oefenstudies;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:my_submitted' %}">{% trans "mijn ingediende studies;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:my_completed' %}">{% trans "mijn afgehandelde studies;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:my_supervised' %}">{% trans "mijn studies als eindverantwoordelijke;" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:my_archive' %}">{% trans "al mijn studies." %}</a>
-                    </li>
-                </ul>
-                <h6 class="mt-2 d-inline-block">
-                    {% trans 'Deelkracht archief' %}
-                </h6>
-                <ul class="startpage-ul">
-                    <li>
-                        <a href="{% url 'proposals:archive' 'AK' %}">{% trans "Alle goedgekeurde studies bekijken van de Algemene Kamer" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'proposals:archive' 'LK' %}">{% trans "Alle goedgekeurde studies bekijken van de Linguïstiek Kamer" %}</a>
-                    </li>
-                </ul>
-            </div>
 
-            <div class="col-md-6 col-12">
-                <h6>
-                    Help
-                </h6>
-                <ul class="startpage-ul">
-                    <li>
-                        <a href="http://Deelkracht.wp.hum.uu.nl/" target="_blank">{% trans "Deelkracht website" %}</a>
-                    </li>
-                    <li>
-                        <a href="http://Deelkracht.wp.hum.uu.nl/reglement-algemene-kamer/"
-                           target="_blank">{% trans "Reglement Algemene Kamer (AK)" %}</a>
-                    </li>
-                    <li>
-                        <a href="http://Deelkracht.wp.hum.uu.nl/reglement-linguistiek-kamer/"
-                           target="_blank">{% trans "Reglement Linguïstiek Kamer (LK)" %}</a>
-                    </li>
-                    <li>
-                        <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw"
-                           target="_blank">{% trans "Informed consent formulieren" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'faqs:list' %}">{% trans "Veelgestelde vragen m.b.t. dit portal" %}</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'feedback:create' %}">{% trans "Feedback op dit portal geven" %}</a>
-                    </li>
-                </ul>
+{#                <p>#}
+{#                    {% blocktrans %}#}
+{#                        In deze portal kunt u het volgende doen:#}
+{#                    {% endblocktrans %}#}
+{#                </p>#}
             </div>
-            <p>{% trans "Bannerfoto door Simona Evsatieva" %}</p>
         </div>
+{#        <div class="uu-inner-container">#}
+{#            <div class="col-md-6 col-12">#}
+{#                <h5>#}
+{#                    {% trans "Dien een nieuwe studie in" %}#}
+{#                </h5>#}
+                {#                {% trans '(check de meest recente voorbeelddocumenten op <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">intranet</a>)' %}#}
+{#                <ul class="startpage-ul">#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:start' %}">{% trans "die volledig nieuw is in deze portal;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:copy' %}">{% trans "op basis van een kopie van een oude studie;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:start_pre' %}">{% trans "voor voortoetsing t.b.v. subsidieaanvraag;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:start_pre_approved' %}">{% trans "die al goedgekeurd is door een andere ethische toetsingscomissie." %}</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{#            <div class="col-md-6 col-12">#}
+{#                <h5>#}
+{#                    {% trans "Een gereviseerde studie aanmelden" %}#}
+{#                </h5>#}
+                {#                {% trans '(check de meest recente voorbeelddocumenten op <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" target="_blank">intranet</a>)' %}#}
+{#                <ul class="startpage-ul">#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:copy_revision' %}">{% trans "als een revisie, gebaseerd op opmerkingen van Deelkracht;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:copy_amendment' %}">{% trans "als amendement, wanneer de studie al goedgekeurd is door Deelkracht." %}</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="uu-inner-container mt-2 mb-2">#}
+{#            <div class="col-md-6 col-12">#}
+{#                <h6>#}
+{#                    {% trans "Bekijk" %}#}
+{#                </h6>#}
+{#                <ul class="startpage-ul">#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:my_concepts' %}">{% trans "mijn conceptstudies;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:my_practice' %}">{% trans "mijn oefenstudies;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:my_submitted' %}">{% trans "mijn ingediende studies;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:my_completed' %}">{% trans "mijn afgehandelde studies;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:my_supervised' %}">{% trans "mijn studies als eindverantwoordelijke;" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:my_archive' %}">{% trans "al mijn studies." %}</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#                <h6 class="mt-2 d-inline-block">#}
+{#                    {% trans 'Deelkracht archief' %}#}
+{#                </h6>#}
+{#                <ul class="startpage-ul">#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:archive' 'AK' %}">{% trans "Alle goedgekeurde studies bekijken van de Algemene Kamer" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'proposals:archive' 'LK' %}">{% trans "Alle goedgekeurde studies bekijken van de Linguïstiek Kamer" %}</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{##}
+{#            <div class="col-md-6 col-12">#}
+{#                <h6>#}
+{#                    Help#}
+{#                </h6>#}
+{#                <ul class="startpage-ul">#}
+{#                    <li>#}
+{#                        <a href="http://Deelkracht.wp.hum.uu.nl/" target="_blank">{% trans "Deelkracht website" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="http://Deelkracht.wp.hum.uu.nl/reglement-algemene-kamer/"#}
+{#                           target="_blank">{% trans "Reglement Algemene Kamer (AK)" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="http://Deelkracht.wp.hum.uu.nl/reglement-linguistiek-kamer/"#}
+{#                           target="_blank">{% trans "Reglement Linguïstiek Kamer (LK)" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw"#}
+{#                           target="_blank">{% trans "Informed consent formulieren" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'faqs:list' %}">{% trans "Veelgestelde vragen m.b.t. dit portal" %}</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a href="{% url 'feedback:create' %}">{% trans "Feedback op dit portal geven" %}</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{#            <p>{% trans "Bannerfoto door Simona Evsatieva" %}</p>#}
+{#        </div>#}
     {% else %}
         <div class="uu-inner-container mt-2 mb-2">
             <div class="col-12">

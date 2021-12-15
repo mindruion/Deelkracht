@@ -33,6 +33,8 @@ uu-navigation-bar {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    left: unset;
+    margin-left: unset;
 }
 
 .coverimage {
@@ -41,7 +43,7 @@ uu-navigation-bar {
     left: -15px;
     width: calc(100% + 30px);
     overflow: hidden;
-    height: 550px;
+    height: 450px;
 }
 
 .uu-logo {
@@ -154,6 +156,27 @@ form label {
         float: right;
     }
 }
+
+@media (max-width: 768px) {
+
+    .uu-logo img {
+        width: 30%;
+        height: 100%;
+    }
+    .uu-navigation-bar {
+    text-align: left;
+    display: block;
+    width: 100%;
+    background-color: white;
+    padding: 3px 0;
+}
+    .uu-navigation-bar .nav-item {
+    background: #00676c;
+    padding: 5px 10px;
+    border-top: 1px solid #bbb;
+}
+}
+
 
 /* Displaying the differences between Proposals */
 .proposals-diff {
@@ -408,5 +431,17 @@ div.warning {
     margin-bottom: 10px;
     background-color: #FCF8E3;
     list-style-type: none;
+    color: #397300;
+}
+
+.task_list {
+    background: #D9EDF7;
+    border: 1px solid #eee;
+    padding: 0em 1em 1em 1em;
+    color: #397300;
+}
+
+.mb-3 tbody tr:nth-of-type(odd) {
+    background: #eee;
     color: #397300;
 }

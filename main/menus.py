@@ -2,7 +2,7 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from menu import Menu, MenuItem
 
-Menu.add_item("home", MenuItem(_('Startpagina'),
+Menu.add_item("home", MenuItem(_(''),
                                reverse('main:home'),
                                exact_url=True
                                ))

@@ -134,7 +134,7 @@ Page <pdf:pagenumber /> of <pdf:pagecount />
         <p>{{ proposal.summary|linebreaks }}</p>
 
         {% with wmo=proposal.wmo %}
-        <h2 style="page-break-before: always">{% trans "Ethische toetsing nodig door een Medische Ethische ToetsingsCommissie (METC)?" %}</h2>
+        <h2 style="page-break-before: auto">{% trans "Ethische toetsing nodig door een Medische Ethische ToetsingsCommissie (METC)?" %}</h2>
         <table>
             <tr>
                 <th>{% get_verbose_field_name "proposals" "wmo" "metc" %}</th><td>{{ wmo.get_metc_display }}</td>
@@ -154,7 +154,7 @@ Page <pdf:pagenumber /> of <pdf:pagecount />
         </table>
 
         {% if wmo.status != wmo.NO_WMO %}
-        <h2 style="page-break-before: always">{% trans "Aanmelding bij de METC" %}</h2>
+        <h2 style="page-break-before: auto">{% trans "Aanmelding bij de METC" %}</h2>
         <table>
             <tr>
                 <th>{% get_verbose_field_name "proposals" "wmo" "metc_application" %}</th><td>{{ wmo.metc_application|yesno:_("ja,nee") }}</td>
@@ -176,7 +176,7 @@ Page <pdf:pagenumber /> of <pdf:pagecount />
         {% endif %}
         {% endwith %}
 
-        <h2 style="page-break-before: always">{% trans "Eén of meerdere trajecten?" %}</h2>
+        <h2 style="page-break-before: auto">{% trans "Eén of meerdere trajecten?" %}</h2>
         <table>
             <tr>
                 <th>{% get_verbose_field_name "proposals" "proposal" "studies_similar" %}</th><td>{{ proposal.studies_similar|yesno:_("ja,nee") }}</td>

@@ -48,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 .uu-container {
     padding-top: 10px;
     padding-bottom: 5px;
-    background: #ff0000;
+    background: #fff;
 }
 
 .uu-inner-container {
@@ -112,9 +112,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .uu-logo img
 {
-width: 100%;
-  height: 100%;
-  object-fit: cover;}
+    height: 48px;
+}
 
 .titletext {
     font-size: 30px;
@@ -145,7 +144,7 @@ width: 100%;
     text-align: left;
     display: block;
     width: 100%;
-    background-color: #810a0a;
+    background-color: #000000;
     padding: 3px 0;
 }
 
@@ -322,13 +321,13 @@ input[type="checkbox"], input[type="radio"]
 }
 
 button[type=submit], input[type=submit], .button-colored {
-    background: #00ff8c;
+    background: #ffcd00;
     color: #000000;
 }
 
 button[type=submit].button-black, input[type=submit].button-black {
     background: #000;
-    color: #394f2c;
+    color: #fff;
 }
 
 button a, .button a,
