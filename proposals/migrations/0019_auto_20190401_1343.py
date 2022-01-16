@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='is_pre_approved',
-            field=models.NullBooleanField(default=None, verbose_name='Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd deze Deelkracht commissie?'),
+            field=models.NullBooleanField(default=None, verbose_name='Heeft u toestemming van een andere ethische toetsingscommissie dan de ETC-SACB?'),
         ),
         migrations.AlterField(
             model_name='proposal',

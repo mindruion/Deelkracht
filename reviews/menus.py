@@ -42,15 +42,8 @@ def create_committee_menu(commitee: str) -> List[MenuItem]:
 
 
 Menu.add_item("main", MenuItem(
-    _("Algemene Kamer"),
+    _("Commissie"),
     "#",
     children=create_committee_menu('AK'),
     check=lambda x: in_general_chamber(x.user)
-))
-
-Menu.add_item("main", MenuItem(
-    _("Linguïstiek Kamer"),
-    "#",
-    children=create_committee_menu('LK'),
-    check=lambda x: in_linguistics_chamber(x.user)
 ))

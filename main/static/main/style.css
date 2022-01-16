@@ -445,3 +445,11 @@ div.warning {
     background: #eee;
     color: #397300;
 }
+
+
+.select2-results__option {
+    padding: 6px;
+    color: black;
+    user-select: none;
+    -webkit-user-select: none;
+}

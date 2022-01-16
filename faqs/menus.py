@@ -33,9 +33,9 @@ help_menu = (
     )
 )
 
-Menu.add_item("main", MenuItem(_('Help'),
-                               "#",
-                               children=help_menu,
-                               exact_url=True,
-                               ))
-
+# Menu.add_item("main", MenuItem(_('Help'),
+#                                "#",
+#                                children=help_menu,
+#                                exact_url=True,
+#                                ))
+#

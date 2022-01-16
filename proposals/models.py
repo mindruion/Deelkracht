@@ -219,9 +219,7 @@ Zep software)'),
     )
 
     is_pre_approved = models.BooleanField(
-        _(
-            'Heeft u formele toestemming van een ethische toetsingcommissie, '
-            'uitgezonderd deze Deelkracht commissie?'),
+        _('Heeft u toestemming van een andere ethische toetsingscommissie dan de ETC-SACB?'),
         default=None,
         null=True,
         blank=True,

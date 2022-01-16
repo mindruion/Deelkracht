@@ -440,7 +440,7 @@ class FilenameFactory:
         
         extension = '.' + original_fn.split('.')[-1][-7:] # At most 7 chars seems reasonable
         
-        fn_parts = ['FETC',
+        fn_parts = ['ETC-SACB',
                     chamber,
                     refnum,
                     lastname,

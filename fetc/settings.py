@@ -138,10 +138,13 @@ MEDIA_ROOT = 'media'
 MEDIA_URL = '/media/'
 
 # E-mail settings
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 2525
+EMAIL_HOST = 'mail.dots.md'
+EMAIL_HOST_PASSWORD = 'dancornilov1!'
+EMAIL_HOST_USER = 'info'
+EMAIL_PORT = 587
 EMAIL_FROM = 'T.D.Mees@uu.nl'
 EMAIL_LOCAL_STAFF = 'T.D.Mees@uu.nl'
+EMAIL_USE_TLS = True
 
 # Django Simple Menu
 # https://django-simple-menu.readthedocs.io/en/latest/index.html

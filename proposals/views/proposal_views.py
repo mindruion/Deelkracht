@@ -6,7 +6,8 @@ from django.conf import settings
 from django.db.models import Q
 from django.db.models.fields.files import FieldFile
 from django.urls import reverse
-from django.utils.translation import ugettext_lazy as _
+from django.utils import translation
+from django.utils.translation import ugettext_lazy as _, get_language
 from django.views import generic
 from easy_pdf.views import PDFTemplateResponseMixin, PDFTemplateView
 from typing import Tuple, Union
@@ -51,6 +52,21 @@ class BaseProposalsView(LoginRequiredMixin, generic.TemplateView):
 
         return context
 
+    @property
+    def rendered_content(self):
+        """Return the freshly rendered content for the template and context
+        described by the TemplateResponse.
+
+        This *does not* set the final content of the response. To set the
+        response content, you must either call render(), or set the
+        content explicitly using the value of this property.
+        """
+        template = self.resolve_template(self.template_name)
+        context = self.resolve_context(self.context_data)
+        translation.activate(self._request.LANGUAGE_CODE)
+        content = template.render(context, self._request)
+        return content
+
 
 class MyProposalsView(BaseProposalsView):
     title = _('Mijn studies')
@@ -61,7 +77,7 @@ class MyProposalsView(BaseProposalsView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data_url'] = reverse('proposals:api:my_archive',)
+        context['data_url'] = reverse('proposals:api:my_archive', )
         return context
 
 
@@ -73,7 +89,7 @@ class MyConceptsView(BaseProposalsView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data_url'] = reverse('proposals:api:my_concepts',)
+        context['data_url'] = reverse('proposals:api:my_concepts', )
         return context
 
 
@@ -85,7 +101,7 @@ class MySubmittedView(BaseProposalsView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data_url'] = reverse('proposals:api:my_submitted',)
+        context['data_url'] = reverse('proposals:api:my_submitted', )
         return context
 
 
@@ -97,7 +113,7 @@ class MyCompletedView(BaseProposalsView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data_url'] = reverse('proposals:api:my_completed',)
+        context['data_url'] = reverse('proposals:api:my_completed', )
         return context
 
 
@@ -111,8 +127,9 @@ class MySupervisedView(BaseProposalsView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data_url'] = reverse('proposals:api:my_supervised',)
+        context['data_url'] = reverse('proposals:api:my_supervised', )
         return context
+
 
 class MyPracticeView(BaseProposalsView):
     title = _('Mijn oefenstudies')
@@ -123,7 +140,7 @@ onderzoeker of eindverantwoordelijke bij betrokken bent.')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['data_url'] = reverse('proposals:api:my_practice',)
+        context['data_url'] = reverse('proposals:api:my_practice', )
         return context
 
 
@@ -178,6 +195,7 @@ class HideFromArchiveView(GroupRequiredMixin, generic.RedirectView):
         proposal.save()
 
         return reverse('proposals:archive')
+
 
 ##########################
 # CRUD actions on Proposal
@@ -237,9 +255,9 @@ class CompareDocumentsView(UsersOrGroupsAllowedMixin, generic.TemplateView):
         settings.GROUP_GENERAL_CHAMBER,
         settings.GROUP_LINGUISTICS_CHAMBER,
     ]
-    
+
     def get_allowed_users(self):
-        
+
         compare_type = self.kwargs.get('type')
         new_pk = self.kwargs.get('new')
         attribute = self.kwargs.get('attribute')
@@ -250,19 +268,18 @@ class CompareDocumentsView(UsersOrGroupsAllowedMixin, generic.TemplateView):
             'observation': Observation,
             'proposal': Proposal,
         }.get(compare_type, None)
-        
+
         if model == Proposal:
             proposal = Proposal.objects.get(pk=new_pk)
         else:
             proposal = model.objects.get(pk=new_pk).proposal
-        
+
         allowed_users = list(proposal.applicants.all())
         if proposal.supervisor:
             allowed_users.append(proposal.supervisor)
-        
+
         return allowed_users
-        
-        
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
 
@@ -274,8 +291,7 @@ class CompareDocumentsView(UsersOrGroupsAllowedMixin, generic.TemplateView):
         context['new_text'] = get_document_contents(new_file)
 
         return context
-    
-    
+
     def _get_files(self) -> Tuple[
         Union[None, FieldFile],
         Union[None, FieldFile]
@@ -338,11 +354,11 @@ class ProposalSubmit(ProposalContextMixin, AllowErrorsOnBackbuttonMixin, UpdateV
         """Sets the Proposal as a form kwarg"""
         kwargs = super(ProposalSubmit, self).get_form_kwargs()
         kwargs['proposal'] = self.get_object()
-        
+
         # Required for examining POST data
         # to check for js-redirect-submit
         kwargs['request'] = self.request
-        
+
         return kwargs
 
     def get_context_data(self, **kwargs):
@@ -358,7 +374,7 @@ class ProposalSubmit(ProposalContextMixin, AllowErrorsOnBackbuttonMixin, UpdateV
         - Save the PDF on the Proposal
         - Start the review process on submission (though not for practice Proposals)
         """
-        
+
         success_url = super(ProposalSubmit, self).form_valid(form)
         if 'save_back' not in self.request.POST and 'js-redirect-submit' not in self.request.POST:
             proposal = self.get_object()

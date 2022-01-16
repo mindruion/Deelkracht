@@ -1546,8 +1546,7 @@ msgstr "Upload your application here (in .pdf or .doc(x)-format)"
 
 #: proposals/models.py:223
 msgid ""
-"Heeft u formele toestemming van een ethische toetsingcommissie, uitgezonderd "
-"deze Deelkracht commissie?"
+"Heeft u toestemming van een andere ethische toetsingscommissie dan de ETC-SACB?"
 msgstr ""
 "Do you have formal approval from an ethics committee, other than this Deelkracht "
 "committee?"
@@ -2349,7 +2348,7 @@ msgstr ""
 #: tasks/templates/tasks/task_form.html:30
 #: tasks/templates/tasks/task_start.html:7
 #: tasks/templates/tasks/task_start.html:28
-msgid "Het takenonderzoek en interviews"
+msgid "Het takenonderzoek"
 msgstr "Task-based research and interviews"
 
 #: proposals/templates/proposals/proposal_diff.html:487
@@ -2670,8 +2669,8 @@ msgstr "Submit application for preliminary assessment"
 
 #: proposals/templates/proposals/proposal_start.html:7
 #: proposals/templates/proposals/proposal_start.html:13
-msgid "Een nieuwe studie aanmelden"
-msgstr "Register a new study"
+msgid "Nieuwe studie aanmelden"
+msgstr "Start new study"
 
 #: proposals/templates/proposals/proposal_start.html:19
 #: proposals/templates/proposals/proposal_start_practice.html:21
@@ -2865,20 +2864,15 @@ msgstr "Preliminary assessment (for subsidy applications)"
 
 #: proposals/templates/proposals/proposal_start_pre_assessment.html:15
 msgid ""
-"\n"
-"                Subsidieverstrekkers vereisen steeds vaker ethische toetsing "
-"van een\n"
-"                beursaanvraag.\n"
-"                Omdat het hier gaat om slechts op hoofdlijnen uitgewerkt "
-"onderzoek met\n"
-"                nog ongewisse financiering is gedetailleerde aanmelding voor "
-"reguliere\n"
-"                Deelkracht toetsing van losse studies niet aan de orde.\n"
-"                In dit geval kunnen onderzoekers Deelkracht verzoeken om "
-"deze\n"
-"                subsidieaanvraag te laten toetsen.\n"
-"                Dit kan via deze route van de portal.\n"
-"                "
+"Omdat de toetsing marginaal en de aanvraagdeadline waarschijnlijk dichtbij is zal ETC-SACB in dit"
+"geval per email-overleg naar een snelle beslissing streven (binnen 1-2 weken). Let op:"
+"subsidieaanvragers dienen deze tijdsspanne mee te nemen in hun tijdsplanning!"
+"Deze marginale toetsing vervangt niet de reguliere toetsing van specifieke studies; wanneer het"
+"onderzoek gefinancierd wordt en de details zijn uitgewerkt, dient de studie alsnog ter toetsing bij"
+"ETC-SACB te worden aangemeld."
+"Het invullen van de portalvragen kost hooguit 5 minuten. U moet een document uploaden. Dit document"
+"moet uit de subsidieaanvraag alle voor ETC-SACB relevante informatie bevatten om het project te"
+"kunnen beoordelen. Dat betekent dat in ieder geval een duidelijke samenvatting gegeven moet worden."
 msgstr ""
 "\n"
 "    Subsidy providers increasingly require ethical assessment for research "
@@ -3467,8 +3461,8 @@ msgstr "Your study does not require assessment by a METC."
 
 #: proposals/views/wmo_views.py:155
 #, python-brace-format
-msgid "Neem contact op met {secretary} om de twijfels weg te nemen."
-msgstr "Contact {secretary} to make sure."
+msgid "Neem contact op met de secretaris om de twijfel weg te nemen."
+msgstr "Contact secretary to make sure."
 
 #: proposals/views/wmo_views.py:161
 msgid "Uw studie zal moeten worden beoordeeld door de METC."
