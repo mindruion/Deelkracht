@@ -163,18 +163,20 @@ form label {
         width: 30%;
         height: 100%;
     }
+
     .uu-navigation-bar {
-    text-align: left;
-    display: block;
-    width: 100%;
-    background-color: white;
-    padding: 3px 0;
-}
+        text-align: left;
+        display: block;
+        width: 100%;
+        background-color: white;
+        padding: 3px 0;
+    }
+
     .uu-navigation-bar .nav-item {
-    background: #00676c;
-    padding: 5px 10px;
-    border-top: 1px solid #bbb;
-}
+        background: #00676c;
+        padding: 5px 10px;
+        border-top: 1px solid #bbb;
+    }
 }
 
 
@@ -432,6 +434,11 @@ div.warning {
     background-color: #FCF8E3;
     list-style-type: none;
     color: #397300;
+}
+
+div.warning a {
+    color: #397300;
+
 }
 
 .task_list {
