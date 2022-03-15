@@ -80,7 +80,7 @@ class SoftValidationMixin:
                 )
 
             if field not in data or not data[field]:
-                self.add_error(field, _('Dit veld is verplicht.'))
+                self.add_error(field, _('Dit veld is vereist.'))
 
     def _initial_post_clean(self):
         opts = self._meta

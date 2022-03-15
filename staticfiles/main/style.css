@@ -163,18 +163,20 @@ form label {
         width: 30%;
         height: 100%;
     }
+
     .uu-navigation-bar {
-    text-align: left;
-    display: block;
-    width: 100%;
-    background-color: white;
-    padding: 3px 0;
-}
+        text-align: left;
+        display: block;
+        width: 100%;
+        background-color: white;
+        padding: 3px 0;
+    }
+
     .uu-navigation-bar .nav-item {
-    background: #00676c;
-    padding: 5px 10px;
-    border-top: 1px solid #bbb;
-}
+        background: #00676c;
+        padding: 5px 10px;
+        border-top: 1px solid #bbb;
+    }
 }
 
 
@@ -434,6 +436,11 @@ div.warning {
     color: #397300;
 }
 
+div.warning a {
+    color: #397300;
+
+}
+
 .task_list {
     background: #D9EDF7;
     border: 1px solid #eee;
@@ -444,4 +451,12 @@ div.warning {
 .mb-3 tbody tr:nth-of-type(odd) {
     background: #eee;
     color: #397300;
+}
+
+
+.select2-results__option {
+    padding: 6px;
+    color: black;
+    user-select: none;
+    -webkit-user-select: none;
 }

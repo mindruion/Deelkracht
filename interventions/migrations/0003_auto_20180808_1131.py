@@ -30,6 +30,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='intervention',
             name='period',
-            field=models.TextField(help_text='De interventie vindt plaats binnen het schooljaar 2018-2019', verbose_name='Wat is de periode waarbinnen de interventie plaatsvindt?'),
+            field=models.TextField(help_text='Geef aan wanneer de interventie plaatsvindt. Bijvoorbeeld binnen het schooljaar 2022-2023', verbose_name='Wat is de periode waarbinnen de interventie plaatsvindt?'),
         ),
     ]

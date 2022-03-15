@@ -378,7 +378,7 @@ class WmoForm(SoftValidationMixin, ConditionalModelForm):
         cleaned_data = super(WmoForm, self).clean()
 
         if 'metc' not in cleaned_data or not cleaned_data['metc']:
-            self.add_error('metc', _('Dit veld is verplicht om verder te '
+            self.add_error('metc', _('Dit veld is vereist om verder te '
                                      'gaan.'))
 
         self.check_dependency(cleaned_data, 'metc', 'metc_details',
@@ -508,7 +508,7 @@ class StudyStartForm(forms.ModelForm):
         cleaned_data = super(StudyStartForm, self).clean()
 
         if cleaned_data['studies_similar'] is None:
-            self.add_error('studies_similar', _('Dit veld is verplicht om '
+            self.add_error('studies_similar', _('Dit veld is vereist om '
                                                 'verder te gaan.'))
         elif not cleaned_data['studies_similar']:
             nr_studies = cleaned_data['studies_number']
@@ -520,7 +520,7 @@ class StudyStartForm(forms.ModelForm):
                     break
                 study_name = 'study_name_' + str(n + 1)
                 if not cleaned_data[study_name]:
-                    self.add_error(study_name, _('Dit veld is verplicht.'))
+                    self.add_error(study_name, _('Dit veld is vereist.'))
 
 
 class ProposalDataManagementForm(SoftValidationMixin, forms.ModelForm):
@@ -575,7 +575,7 @@ class ProposalSubmitForm(forms.ModelForm):
             
             if check_local_facilities(self.proposal) and cleaned_data[
                 'inform_local_staff'] is None:
-                self.add_error('inform_local_staff', _('Dit veld is verplicht.'))
+                self.add_error('inform_local_staff', _('Dit veld is vereist.'))
             
             for study in self.instance.study_set.all():
                 documents = Documents.objects.get(study=study)

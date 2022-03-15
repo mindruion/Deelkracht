@@ -4,7 +4,7 @@
 {% load i18n %}
 
 {% block header_title %}
-    {% trans "Het takenonderzoek" %} - {{ block.super }}
+    {% trans "Het taakonderzoek" %} - {{ block.super }}
 {% endblock %}
 
 {% block html_head %}
@@ -25,7 +25,7 @@ $(function() {
                 {% include 'base/navigation.html' %}
             {% endwith %}
             <h2>
-                {% trans "Het takenonderzoek" %}
+                {% trans "Het taakonderzoek" %}
             </h2>
             {% include "main/setting_checks.html" %}
             {% include "tasks/session_title.html" %}

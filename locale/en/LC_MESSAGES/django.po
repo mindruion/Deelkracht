@@ -158,7 +158,7 @@ msgid "Wat is de periode waarbinnen de interventie plaatsvindt?"
 msgstr "What is the period in which the intervention will take place?"
 
 #: interventions/models.py:16
-msgid "De interventie vindt plaats binnen het schooljaar 2018-2019"
+msgid "Geef aan wanneer de interventie plaatsvindt. Bijvoorbeeld binnen het schooljaar 2022-2023"
 msgstr "The intervention will take place in the academic year 2018-2019"
 
 #: interventions/models.py:22
@@ -174,7 +174,7 @@ msgid "Wat is de duur van de interventie per sessie in minuten?"
 msgstr "What is the duration of the intervention session in minutes?"
 
 #: interventions/models.py:38
-msgid "Wie voert de interventie uit?"
+msgid "Wie voert de interventie uit? Leg uit wat de rol en de functie van de persoon is. "
 msgstr "Who will conduct the intervention?"
 
 #: interventions/models.py:43
@@ -277,7 +277,7 @@ msgstr "Intervention saved"
 #: main/forms/conditional_form.py:48 main/forms/mixins.py:83
 #: proposals/forms.py:523 proposals/forms.py:578 studies/forms.py:104
 #: studies/forms.py:115 studies/forms.py:121 tasks/forms.py:87
-msgid "Dit veld is verplicht."
+msgid "Dit veld is vereist."
 msgstr "This field is mandatory."
 
 #: main/menus.py:5 main/templates/base/menu.html:7
@@ -834,9 +834,8 @@ msgstr ""
 #: main/templates/main/index.html:60
 #: proposals/templates/proposals/study_consent.html:79
 msgid ""
-"Gebruik de juiste (meest recente) <a href=\"https://intranet.uu.nl/"
-"documenten-ethische-toetsingscommissie-gw\" target=\"blank"
-"\">voorbeelddocumenten</a> voor de <em>informed consent</em>. </li>"
+"Gebruik de juiste (meest recente) "
+"voorbeelddocumenten voor de <em>informed consent</em>. </li>"
 msgstr ""
 "Make sure to use the correct (most recent) <a href=\"https://intranet.uu.nl/"
 "en/documents-ethics-assessment-committee-humanities\" target=\"_blank"
@@ -1342,7 +1341,7 @@ msgid ""
 msgstr "This field shows only approved applications in which you are involved."
 
 #: proposals/forms.py:381 proposals/forms.py:511
-msgid "Dit veld is verplicht om verder te gaan."
+msgid "Dit veld is vereist om verder te gaan."
 msgstr "This field is mandatory to continue."
 
 #: proposals/forms.py:389
@@ -1453,7 +1452,7 @@ msgid "Door welke comissie dient deze studie te worden beoordeeld?"
 msgstr "Which chamber should be reviewing this study?"
 
 #: proposals/models.py:112
-msgid "Aan welk onderzoeksinstituut bent u verbonden?"
+msgid "Aan welke organisatie bent u verbonden?"
 msgstr "To which research institute are you affiliated?"
 
 #: proposals/models.py:118
@@ -2074,7 +2073,7 @@ msgstr "Data Management and Privacy"
 
 #: proposals/templates/proposals/proposal_data_management.html:20
 msgid ""
-"De Universiteit Utrecht streeft naar integriteit, duurzaamheid, en "
+"Deelkracht streeft naar integriteit, duurzaamheid, en "
 "transparantie in de omgang met onderzoeksdata, waaronder persoonsgegevens. "
 "Sinds de introductie van de AVG zijn er duidelijke regels die onderzoekers "
 "moeten volgen met betrekking tot deze data."
@@ -2091,10 +2090,8 @@ msgstr "Data Management Plan"
 
 #: proposals/templates/proposals/proposal_data_management.html:27
 msgid ""
-"Een data management plan is sinds 2020 <a href=\"https://intranet.uu.nl/"
-"actueel/nieuws/nieuw-facultair-datamanagementbeleid\" target=\"_blank"
-"\">verplicht</a> bij de faculteit geesteswetenschappen, zowel als bij de "
-"instanties NWO en ERC als zij subsidie voor een onderzoek bieden."
+"Op dit moment is Deelkracht druk bezig met het opzetten van regels en richtlijnen omtrent datamanagement. In een later stadium volgt hier meer informatie over. "
+
 msgstr ""
 "A data management plan is <a href=\"https://intranet.uu.nl/en/current-"
 "affairs/news/new-faculty-data-management-policy\" target=\"_blank"
@@ -2106,11 +2103,7 @@ msgid ""
 "De faculteit biedt uitgebreide informatie op het gebied van data management, "
 "waaronder ook <a href=\"https://www.uu.nl/en/research/research-data-"
 "management/guides/data-management-planning\" target=\"_blank\">hoe deze te "
-"schrijven</a>. <br/> Je kunt bij de faculteit ook je DMP laten nakijken door "
-"<a href=\"https://www.uu.nl/en/research/research-data-management/tools-"
-"services/data-management-plan-review\" target=\"_blank\">Research Data "
-"Management Support</a> of de facultaire <a href=\"mailto:datamanagement."
-"gw@uu.nl\" target=\"_blank\">datamanager</a>."
+"schrijven</a>. <br/> "
 msgstr ""
 "The faculty provides information on <a href=\"https://intranet.uu.nl/en/"
 "current-affairs/news/new-faculty-data-management-policy\" target=\"_blank"
@@ -2348,7 +2341,7 @@ msgstr ""
 #: tasks/templates/tasks/task_form.html:30
 #: tasks/templates/tasks/task_start.html:7
 #: tasks/templates/tasks/task_start.html:28
-msgid "Het takenonderzoek"
+msgid "Het taakonderzoek"
 msgstr "Task-based research and interviews"
 
 #: proposals/templates/proposals/proposal_diff.html:487
@@ -2697,7 +2690,7 @@ msgstr ""
 #: proposals/templates/proposals/proposal_start.html:35
 #: proposals/templates/proposals/proposal_start_practice.html:37
 msgid ""
-"Gebruik de juiste (meest recente) <a href=\"https://intranet.uu.nl/"
+"Gebruik de juiste (meest recente) "
 "documenten-ethische-toetsingscommissie-gw\">voorbeelddocumenten</a> voor de "
 "<em>informed consent</em>."
 msgstr ""
@@ -4291,7 +4284,7 @@ msgid "Werving"
 msgstr "Recruitment"
 
 #: studies/models.py:127 studies/models.py:213
-msgid "Taakonderzoek en interviews"
+msgid "Taakonderzoek"
 msgstr "Task-based research and interviews"
 
 #: studies/models.py:132
@@ -4335,7 +4328,7 @@ msgstr ""
 "the case with (some of) the participants in your study?"
 
 #: studies/models.py:166
-msgid "Selecteer de bijzondere kenmerken van uw proefpersonen"
+msgid "Selecteer de bijzondere kenmerken van uw deelnemers:"
 msgstr "Select the special characteristics of your participants"
 
 #: studies/models.py:172
@@ -4369,8 +4362,7 @@ msgstr ""
 
 #: studies/models.py:194
 msgid ""
-"Het standaardbedrag voor vergoeding aan de deelnemers is €10,- per uur. "
-"Minderjarigen mogen geen geld ontvangen, maar wel een cadeautje."
+"Het bedrag dat wordt gegeven moet in verhouding zijn tot wat er aan de deelnemer wordt gevraagd. Het bedrag mag niet zo hoog zijn dat deelnemers in de verleiding komen om iets te doen wat ze nooit zouden doen wanneer er geen geld tegenover staat. "
 msgstr ""
 "The standard sum for compensation of participants is €10 per hour. Minors "
 "are not permitted to receive money, but can be given a gift."
@@ -4412,7 +4404,7 @@ msgstr "How many sessions of tasks will the participants take part in?"
 #: studies/models.py:239
 msgid ""
 "Wanneer u bijvoorbeeld eerst de deelnemer een taak/aantal taken laat doen "
-"tijdens een eerste bezoek aan het lab en u laat de deelnemer nog een keer "
+"tijdens een eerste bezoek en u laat de deelnemer nog een keer "
 "terugkomen om dezelfde taak/taken of andere taak/taken te doen, dan spreken "
 "we van twee sessies. Wanneer u meerdere taken afneemt op dezelfde dag, met "
 "pauzes daartussen, dan geldt dat toch als één sessie."
@@ -4718,7 +4710,7 @@ msgstr ""
 #: studies/templates/studies/study_design.html:45
 msgid ""
 "\n"
-"                            <strong>Taakonderzoek en Interviews</strong>:</"
+"                            <strong>Taakonderzoek</strong>:</"
 "br >\n"
 "                            De onderzoeker\n"
 "                            <ul>\n"

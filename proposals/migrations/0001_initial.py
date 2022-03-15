@@ -34,7 +34,7 @@ class Migration(migrations.Migration):
                 ('reference_number', models.CharField(unique=True, max_length=16)),
                 ('date_start', models.DateField(null=True, verbose_name='Wat is, indien bekend, de beoogde startdatum van uw studie?', blank=True)),
                 ('title', models.CharField(help_text='De titel die u hier opgeeft is zichtbaar voor de ETCL-leden en, wanneer de studie is goedgekeurd, ook voor alle UiL-OTS medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.', unique=True, max_length=200, verbose_name='Wat is de titel van uw studie?')),
-                ('summary', models.TextField(verbose_name='Geef een duidelijke, bondige beschrijving van de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.', validators=[main.validators.MaxWordsValidator(200)])),
+                ('summary', models.TextField(verbose_name='Geef een duidelijke, bondige beschrijving van het onderzoek.  Beschrijf in ieder geval het doel en de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.', validators=[main.validators.MaxWordsValidator(200)])),
                 ('other_applicants', models.BooleanField(default=False, verbose_name='Zijn er nog andere UiL OTS-onderzoekers of -studenten bij deze studie betrokken?')),
                 ('other_stakeholders', models.BooleanField(default=False, verbose_name='Zijn er onderzoekers van buiten UiL OTS bij deze studie betrokken?')),
                 ('stakeholders', models.TextField(verbose_name='Andere betrokkenen', blank=True)),
@@ -68,7 +68,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Wmo',
             fields=[
-                ('metc', models.CharField(default=None, max_length=1, verbose_name='Vindt de dataverzameling plaats binnen het UMC Utrecht of andere instelling waar toetsing door een METC verplicht is gesteld?', choices=[(b'Y', 'ja'), (b'N', 'nee'), (b'?', 'twijfel')])),
+                ('metc', models.CharField(default=None, max_length=1, verbose_name='Vindt de dataverzameling plaats binnen een instelling waar toetsing door een METC verplicht is gesteld?', choices=[(b'Y', 'ja'), (b'N', 'nee'), (b'?', 'twijfel')])),
                 ('metc_details', models.TextField(verbose_name='Licht toe', blank=True)),
                 ('metc_institution', models.CharField(max_length=200, verbose_name='Welke instelling?', blank=True)),
                 ('is_medical', models.CharField(blank=True, help_text='De definitie van medisch-wetenschappelijk onderzoek is: Medisch-wetenschappelijk onderzoek is onderzoek dat als doel heeft het beantwoorden van een vraag op het gebied van ziekte en gezondheid (etiologie, pathogenese, verschijnselen/symptomen, diagnose, preventie, uitkomst of behandeling van ziekte), door het op systematische wijze vergaren en bestuderen van gegevens. Het onderzoek beoogt bij te dragen aan medische kennis die ook geldend is voor populaties buiten de directe onderzoekspopulatie. (CCMO-notitie, Definitie medisch-wetenschappelijk onderzoek, 2005, ccmo.nl)', max_length=1, verbose_name='Is de onderzoeksvraag medisch-wetenschappelijk van aard (zoals gedefinieerd door de WMO)?', choices=[(b'Y', 'ja'), (b'N', 'nee'), (b'?', 'twijfel')])),

@@ -4,11 +4,10 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from django.db.models import Q
 
-
-
 from django.utils.translation import ugettext_lazy as _
 from django.utils.functional import lazy
 from django.utils.safestring import mark_safe
+
 mark_safe_lazy = lazy(mark_safe, str)
 
 from main.models import YES_NO_DOUBT
@@ -17,14 +16,12 @@ from proposals.models import Proposal
 from studies.utils import study_urls
 from proposals.utils.proposal_utils import FilenameFactory, OverwriteStorage
 
-
 INFORMED_CONSENT_FILENAME = FilenameFactory('Informed_Consent')
 METC_DECISION_FILENAME = FilenameFactory('METC_Decision')
 BRIEFING_FILENAME = FilenameFactory('Briefing')
 DEPARTMENT_CONSENT_FILENAME = FilenameFactory('Department_Consent')
 DEPARTMENT_INFO_FILENAME = FilenameFactory('Department_Info')
 PARENTAL_INFO_FILENAME = FilenameFactory('Parental_Info')
-
 
 
 class AgeGroup(models.Model):
@@ -124,7 +121,7 @@ class Study(models.Model):
     DESIGNS = (
         (OBSERVATION, _('Observatieonderzoek')),
         (INTERVENTION, _('Interventieonderzoek')),
-        (SESSIONS, _('Taakonderzoek en interviews')),
+        (SESSIONS, _('Taakonderzoek')),
     )
 
     order = models.PositiveIntegerField()
@@ -141,7 +138,7 @@ class Study(models.Model):
 Dan moet u hier hier 4-5 én 6-11 invullen.'))
     legally_incapable = models.BooleanField(
         _('Maakt uw studie gebruik van wils<u>on</u>bekwame (volwassen) \
-deelnemers?'), # Note: Form labels with HTML are hard-coded in the Form meta class
+deelnemers?'),  # Note: Form labels with HTML are hard-coded in the Form meta class
         help_text=_('Wilsonbekwame volwassenen zijn volwassenen waarvan \
 redelijkerwijs mag worden aangenomen dat ze onvoldoende kunnen inschatten \
 wat hun eventuele deelname allemaal behelst, en/of waarvan anderszins mag \
@@ -163,7 +160,7 @@ Is dit in uw studie bij (een deel van) de deelnemers het geval?'),
         Trait,
         blank=True,
         verbose_name=_(
-            'Selecteer de bijzondere kenmerken van uw proefpersonen'))
+            'Selecteer de bijzondere kenmerken van uw deelnemers'))
     traits_details = models.CharField(
         _('Namelijk'),
         max_length=200,
@@ -191,9 +188,8 @@ te testen?'),
         Compensation,
         verbose_name=_(
             'Welke vergoeding krijgt de deelnemer voor zijn/haar deelname?'),
-        help_text=_('Het standaardbedrag voor vergoeding aan de deelnemers \
-is €10,- per uur. Minderjarigen mogen geen geld ontvangen, maar wel een \
-cadeautje.'),
+        help_text=_(
+            'Het bedrag dat wordt gegeven moet in verhouding zijn tot wat er aan de deelnemer wordt gevraagd. Het bedrag mag niet zo hoog zijn dat deelnemers in de verleiding komen om iets te doen wat ze nooit zouden doen wanneer er geen geld tegenover staat.'),
         null=True,
         blank=True,
         on_delete=models.CASCADE)
@@ -210,7 +206,7 @@ cadeautje.'),
         _('Observatieonderzoek'),
         default=False)
     has_sessions = models.BooleanField(
-        _('Taakonderzoek en interviews'),
+        _('Taakonderzoek'),
         default=False)
 
     # Fields with respect to informed consent
@@ -219,9 +215,9 @@ cadeautje.'),
         help_text=mark_safe_lazy(_('Wanneer u kinderen via een instelling \
 (dus ook school) werft en u de ouders niet laat ondertekenen, maar in \
 plaats daarvan de leiding van die instelling, dan maakt u gebruik van \
-passieve informed consent. U kunt de templates vinden op \
-<a href="https://intranet.uu.nl/documenten-ethische-toetsingscommissie-gw" \
-target="_blank">Deelkracht-website</a>.')),
+passieve informed consent. U kunt de templates vinden op de website van de  \
+<a href="https://Deelkracht.nl" \
+target="_blank">ETC-SACB</a>.')),
         null=True,
         blank=True,
     )
@@ -235,9 +231,9 @@ toegestaan en draagt niet de voorkeur van de commissie.'),
     sessions_number = models.PositiveIntegerField(
         _('Hoeveel sessies met taakonderzoek zullen de deelnemers doorlopen?'),
         null=True,
-        validators=[MinValueValidator(1), MaxValueValidator(100)], # Max of 100 is just a technical safeguard
+        validators=[MinValueValidator(1), MaxValueValidator(100)],  # Max of 100 is just a technical safeguard
         help_text=_('Wanneer u bijvoorbeeld eerst de deelnemer een \
-taak/aantal taken laat doen tijdens een eerste bezoek aan het lab en \
+taak/aantal taken laat doen tijdens een eerste bezoek en \
 u laat de deelnemer nog een keer terugkomen om dezelfde taak/taken \
 of andere taak/taken te doen, dan spreken we van twee sessies. \
 Wanneer u meerdere taken afneemt op dezelfde dag, met pauzes daartussen, \
@@ -433,7 +429,7 @@ class Documents(models.Model):
         upload_to=INFORMED_CONSENT_FILENAME,
         storage=OverwriteStorage(),
     )
-        
+
     briefing = models.FileField(
         _('Upload hier de informatiebrief (in .pdf of .doc(x)-formaat)'),
         blank=True,

@@ -12,7 +12,7 @@ class ObservationForm(SoftValidationMixin, ConditionalModelForm):
     class Meta:
         model = Observation
         fields = [
-            'setting', 'setting_details', 'supervision', 'leader_has_coc',
+            'setting', 'setting_details', 'leader_has_coc',
             'details_who', 'details_why', 'details_frequency',
             'is_anonymous', 'is_anonymous_details', 'is_in_target_group',
             'is_in_target_group_details', 'is_nonpublic_space', 'is_nonpublic_space_details',
@@ -22,7 +22,7 @@ class ObservationForm(SoftValidationMixin, ConditionalModelForm):
         ]
         widgets = {
             'setting': forms.CheckboxSelectMultiple(),
-            'supervision': forms.RadioSelect(choices=YES_NO),
+            # 'supervision': forms.RadioSelect(choices=YES_NO),
             'leader_has_coc': forms.RadioSelect(choices=YES_NO),
             'is_anonymous': forms.RadioSelect(choices=YES_NO),
             'is_in_target_group': forms.RadioSelect(choices=YES_NO),
@@ -45,9 +45,8 @@ class ObservationForm(SoftValidationMixin, ConditionalModelForm):
         self.fields['details_why'].label = mark_safe(self.fields['details_why'].label)
         self.fields['details_frequency'].label = mark_safe(self.fields['details_frequency'].label)
 
-
         if not self.study.has_children():
-            del self.fields['supervision']
+            # del self.fields['supervision']
             del self.fields['leader_has_coc']
 
     def get_soft_validation_fields(self):
@@ -72,17 +71,15 @@ class ObservationForm(SoftValidationMixin, ConditionalModelForm):
         )
 
         self.check_dependency_multiple(cleaned_data, 'setting', 'needs_details', 'setting_details')
-        if self.study.has_children():
-            self.check_dependency_multiple(cleaned_data, 'setting', 'needs_supervision', 'supervision')
-            self.check_dependency(cleaned_data, 'supervision', 'leader_has_coc', f1_value=False)
+        # if self.study.has_children():
+        #     self.check_dependency_multiple(cleaned_data, 'setting', 'needs_supervision', 'supervision')
+        #     self.check_dependency(cleaned_data, 'supervision', 'leader_has_coc', f1_value=False)
         self.check_dependency(cleaned_data, 'needs_approval', 'approval_institution')
         self.check_dependency_multiple(cleaned_data, 'registrations', 'needs_details', 'registrations_details')
 
         self.check_dependency(cleaned_data, 'is_anonymous', 'is_anonymous_details')
         self.check_dependency(cleaned_data, 'is_in_target_group', 'is_in_target_group_details')
         self.check_dependency(cleaned_data, 'is_nonpublic_space', 'is_nonpublic_space_details')
-
-
 
 
 class ObservationUpdateAttachmentsForm(forms.ModelForm):

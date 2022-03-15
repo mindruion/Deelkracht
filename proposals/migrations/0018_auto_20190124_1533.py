@@ -32,6 +32,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='summary',
-            field=models.TextField(blank=True, validators=[main.validators.MaxWordsValidator(200)], verbose_name='Geef een duidelijke, bondige beschrijving van de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.'),
+            field=models.TextField(blank=True, validators=[main.validators.MaxWordsValidator(200)], verbose_name='Geef een duidelijke, bondige beschrijving van het onderzoek.  Beschrijf in ieder geval het doel en de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.'),
         ),
     ]

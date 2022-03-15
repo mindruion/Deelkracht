@@ -27,7 +27,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='study',
             name='has_sessions',
-            field=models.BooleanField(default=False, verbose_name='Taakonderzoek en interviews'),
+            field=models.BooleanField(default=False, verbose_name='Taakonderzoek'),
         ),
         migrations.AlterField(
             model_name='study',

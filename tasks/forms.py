@@ -84,7 +84,7 @@ class TaskStartForm(SoftValidationMixin, ConditionalModelForm):
         if not cleaned_data.get('is_copy') and not cleaned_data.get('tasks_number'):
             # Prevent double required errors
             if 'tasks_number' not in self.errors:
-                self.add_error('tasks_number', forms.ValidationError(_('Dit veld is verplicht.'), code='required'))
+                self.add_error('tasks_number', forms.ValidationError(_('Dit veld is vereist.'), code='required'))
 
             
 

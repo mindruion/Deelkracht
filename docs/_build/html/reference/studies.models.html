@@ -694,7 +694,7 @@ A Study consists of participant details, experiment design and consent forms.</p
 <li><strong>compensation_details</strong> (<em>CharField</em>) – Namelijk</li>
 <li><strong>has_intervention</strong> (<em>BooleanField</em>) – Interventieonderzoek</li>
 <li><strong>has_observation</strong> (<em>BooleanField</em>) – Observatieonderzoek</li>
-<li><strong>has_sessions</strong> (<em>BooleanField</em>) – Taakonderzoek en interviews</li>
+<li><strong>has_sessions</strong> (<em>BooleanField</em>) – Taakonderzoek</li>
 <li><strong>passive_consent</strong> (<em>NullBooleanField</em>) – Maakt u gebruik van passieve informed consent?. Wanneer u kinderen via een instelling (dus ook school) werft en u de ouders niet laat ondertekenen, maar in plaats daarvan de leiding van die instelling, dan maakt u gebruik van passieve informed consent. U kunt de templates vinden op Deelkracht-website.</li>
 <li><strong>passive_consent_details</strong> (<em>TextField</em>) – Licht uw antwoord toe. wij willen u wijzen op het reglement, sectie 3.1 ‘d’ en ‘e’. passive consent is slechts in enkele gevallen toegestaan en draagt niet de voorkeur van de commissie.</li>
 <li><strong>sessions_number</strong> (<em>PositiveIntegerField</em>) – Hoeveel sessies met taakonderzoek zullen de deelnemers doorlopen?. Wanneer u bijvoorbeeld eerst de deelnemer een taak/aantal taken laat doen tijdens een eerste bezoek aan het lab en u laat de deelnemer nog een keer terugkomen om dezelfde taak/taken of andere taak/taken te doen, dan spreken we van twee sessies. Wanneer u meerdere taken afneemt op dezelfde dag, met pauzes daartussen, dan geldt dat toch als één sessie.</li>
@@ -708,7 +708,7 @@ A Study consists of participant details, experiment design and consent forms.</p
 <li><strong>risk_details</strong> (<em>TextField</em>) – Licht toe</li>
 <li><strong>proposal</strong> (ForeignKey to <a class="reference internal" href="proposals.models.html#proposals.models.Proposal" title="proposals.models.Proposal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Proposal</span></code></a>) – Proposal</li>
 <li><strong>age_groups</strong> (<em>ManyToManyField</em>) – Uit welke leeftijdscategorie(ën) bestaat uw deelnemersgroep?. De beoogde leeftijdsgroep kan zijn 5-7 jarigen. Dan moet u hier hier 4-5 én 6-11 invullen.</li>
-<li><strong>traits</strong> (<em>ManyToManyField</em>) – Selecteer de bijzondere kenmerken van uw proefpersonen</li>
+<li><strong>traits</strong> (<em>ManyToManyField</em>) – Selecteer de bijzondere kenmerken van uw deelnemers:</li>
 <li><strong>recruitment</strong> (<em>ManyToManyField</em>) – Hoe worden de deelnemers geworven?</li>
 </ul>
 </td>
@@ -717,7 +717,7 @@ A Study consists of participant details, experiment design and consent forms.</p
 </table>
 <dl class="attribute">
 <dt id="studies.models.Study.DESIGNS">
-<code class="descname">DESIGNS</code><em class="property"> = ((0, 'Observatieonderzoek'), (1, 'Interventieonderzoek'), (2, 'Taakonderzoek en interviews'))</em><a class="headerlink" href="#studies.models.Study.DESIGNS" title="Permalink to this definition">¶</a></dt>
+<code class="descname">DESIGNS</code><em class="property"> = ((0, 'Observatieonderzoek'), (1, 'Interventieonderzoek'), (2, 'Taakonderzoek'))</em><a class="headerlink" href="#studies.models.Study.DESIGNS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="exception">
@@ -880,7 +880,7 @@ A Study consists of participant details, experiment design and consent forms.</p
 <dl class="attribute">
 <dt id="studies.models.Study.has_sessions">
 <code class="descname">has_sessions</code><a class="headerlink" href="#studies.models.Study.has_sessions" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Taakonderzoek en interviews</p>
+<dd><p><strong>Model field:</strong> Taakonderzoek</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1059,7 +1059,7 @@ A Study consists of participant details, experiment design and consent forms.</p
 <dl class="attribute">
 <dt id="studies.models.Study.traits">
 <code class="descname">traits</code><a class="headerlink" href="#studies.models.Study.traits" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Selecteer de bijzondere kenmerken van uw proefpersonen, accesses the M2M <a class="reference internal" href="#studies.models.Study" title="studies.models.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> model.</p>
+<dd><p><strong>Model field:</strong> Selecteer de bijzondere kenmerken van uw deelnemers:, accesses the M2M <a class="reference internal" href="#studies.models.Study" title="studies.models.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> model.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1169,7 +1169,7 @@ The ‘needs_details’ field is used to determine whether the ‘necessity’ f
 <dl class="attribute">
 <dt id="studies.models.Trait.study_set">
 <code class="descname">study_set</code><a class="headerlink" href="#studies.models.Trait.study_set" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Selecteer de bijzondere kenmerken van uw proefpersonen, accesses the M2M <a class="reference internal" href="#studies.models.Study" title="studies.models.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> model.</p>
+<dd><p><strong>Model field:</strong> Selecteer de bijzondere kenmerken van uw deelnemers:, accesses the M2M <a class="reference internal" href="#studies.models.Study" title="studies.models.Study"><code class="xref py py-class docutils literal notranslate"><span class="pre">Study</span></code></a> model.</p>
 </dd></dl>
 
 </dd></dl>

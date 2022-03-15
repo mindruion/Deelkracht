@@ -25,7 +25,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='intervention',
             name='experimenter',
-            field=models.TextField(blank=True, verbose_name='Wie voert de interventie uit?'),
+            field=models.TextField(blank=True, verbose_name='Wie voert de interventie uit? Leg uit wat de rol en de functie van de persoon is. '),
         ),
         migrations.AlterField(
             model_name='intervention',
@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='intervention',
             name='period',
-            field=models.TextField(blank=True, help_text='De interventie vindt plaats binnen het schooljaar 2018-2019', verbose_name='Wat is de periode waarbinnen de interventie plaatsvindt?'),
+            field=models.TextField(blank=True, help_text='Geef aan wanneer de interventie plaatsvindt. Bijvoorbeeld binnen het schooljaar 2022-2023', verbose_name='Wat is de periode waarbinnen de interventie plaatsvindt?'),
         ),
         migrations.AlterField(
             model_name='intervention',

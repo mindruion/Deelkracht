@@ -84,31 +84,31 @@ Menu.add_item(
         check=lambda x: x.user.is_authenticated,
     )
 )
-#
-# archive_menu = (
-#     MenuItem(
-#         _("Alle studies bekijken van de Algemene Kamer"),
-#         reverse("proposals:archive", args=['AK']),
-#     ),
-#     MenuItem(
-#         _("Alle studies bekijken van de Linguïstiek Kamer"),
-#         reverse("proposals:archive", args=['LK']),
-#     ),
-#     MenuItem(
-#         _("Site-export"),
-#         reverse("proposals:archive_export"),
-#         check=lambda x: is_secretary(x.user),
-#     ),
-# )
+
+archive_menu = (
+    MenuItem(
+        _("Alle studies bekijken van de Algemene Kamer"),
+        reverse("proposals:archive", args=['AK']),
+    ),
+    MenuItem(
+        _("Alle studies bekijken van de Linguïstiek Kamer"),
+        reverse("proposals:archive", args=['LK']),
+    ),
+    MenuItem(
+        _("Site-export"),
+        reverse("proposals:archive_export"),
+        check=lambda x: is_secretary(x.user),
+    ),
+)
 
 
-# Menu.add_item(
-#     "main",
-#     MenuItem(
-#         _("Archief"),
-#         "#",
-#         slug='archive',  # needed for sub-menu!
-#         children=archive_menu,
-#         check=lambda x: x.user.is_authenticated,
-#     )
-# )
+Menu.add_item(
+    "main",
+    MenuItem(
+        _("Archief"),
+        "#",
+        slug='archive',  # needed for sub-menu!
+        children=archive_menu,
+        check=lambda x: x.user.is_authenticated,
+    )
+)

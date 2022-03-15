@@ -9,7 +9,7 @@ class InterventionForm(SoftValidationMixin, ConditionalModelForm):
     class Meta:
         model = Intervention
         fields = [
-            'setting', 'setting_details', 'supervision', 'leader_has_coc',
+            'setting', 'setting_details', 'leader_has_coc',
             'period', 'multiple_sessions', 'session_frequency', 'duration',
             'experimenter', 'description',
             'has_controls', 'controls_description',
@@ -17,7 +17,6 @@ class InterventionForm(SoftValidationMixin, ConditionalModelForm):
         ]
         widgets = {
             'setting':           forms.CheckboxSelectMultiple(),
-            'supervision':       forms.RadioSelect(choices=YES_NO),
             'multiple_sessions': forms.RadioSelect(choices=YES_NO),
             'leader_has_coc':    forms.RadioSelect(choices=YES_NO),
             'has_controls':      forms.RadioSelect(choices=YES_NO),
@@ -35,7 +34,6 @@ class InterventionForm(SoftValidationMixin, ConditionalModelForm):
         super(InterventionForm, self).__init__(*args, **kwargs)
 
         if not self.study.has_children():
-            del self.fields['supervision']
             del self.fields['leader_has_coc']
 
     def get_soft_validation_fields(self):
@@ -62,11 +60,11 @@ class InterventionForm(SoftValidationMixin, ConditionalModelForm):
 
         self.check_dependency_multiple(cleaned_data, 'setting', 'needs_details',
                                        'setting_details')
-        if self.study.has_children():
-            self.check_dependency_multiple(cleaned_data, 'setting',
-                                           'needs_supervision', 'supervision')
-            self.check_dependency(cleaned_data, 'supervision', 'leader_has_coc',
-                                  f1_value=False)
+        # if self.study.has_children():
+            # self.check_dependency_multiple(cleaned_data, 'setting',
+            #                                'needs_supervision', 'supervision')
+            # self.check_dependency(cleaned_data, 'supervision', 'leader_has_coc',
+            #                       f1_value=False)
         self.check_dependency(cleaned_data, 'has_controls',
                               'controls_description')
         self.check_dependency(cleaned_data, 'multiple_sessions',

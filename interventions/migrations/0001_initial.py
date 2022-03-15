@@ -21,7 +21,7 @@ class Migration(migrations.Migration):
                 ('period', models.TextField(verbose_name='Wat is de periode waarbinnen de interventie plaatsvindt?')),
                 ('amount_per_week', models.PositiveIntegerField(verbose_name='Hoe vaak per week vindt de interventiesessie plaats?')),
                 ('duration', models.PositiveIntegerField(verbose_name='Wat is de duur van de interventie per sessie in minuten?')),
-                ('experimenter', models.TextField(verbose_name='Wie voert de interventie uit?')),
+                ('experimenter', models.TextField(verbose_name='Wie voert de interventie uit? Leg uit wat de rol en de functie van de persoon is. ')),
                 ('description', models.TextField(verbose_name='Geef een beschrijving van de experimentele interventie')),
                 ('has_controls', models.BooleanField(default=False, verbose_name='Is er sprake van een controlegroep?')),
                 ('controls_description', models.TextField(verbose_name='Geef een beschrijving van de controleinterventie', blank=True)),

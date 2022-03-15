@@ -32,12 +32,12 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='other_applicants',
-            field=models.BooleanField(default=False, verbose_name='Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de onderzoeksinstituten ICON, OFR, OGK of UiL OTS?'),
+            field=models.BooleanField(default=False, verbose_name='Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de bovengenoemde organisaties?'),
         ),
         migrations.AlterField(
             model_name='proposal',
             name='other_stakeholders',
-            field=models.BooleanField(default=False, verbose_name='Zijn er nog andere onderzoekers bij deze studie betrokken die <strong>niet</strong> geaffilieerd zijn aan een van de onderzoeksinstituten van de Faculteit Geestwetenschappen van de UU? '),
+            field=models.BooleanField(default=False, verbose_name='Zijn er nog andere onderzoekers bij deze studie betrokken die <strong>niet</strong> geaffilieerd zijn aan één van bovengenoemde organisaties? '),
         ),
         migrations.AlterField(
             model_name='proposal',
@@ -62,7 +62,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='wmo',
             name='metc',
-            field=models.CharField(blank=True, choices=[('Y', 'ja'), ('N', 'nee'), ('?', 'twijfel')], default=None, max_length=1, verbose_name='Vindt de dataverzameling plaats binnen het UMC Utrecht of andere instelling waar toetsing door een METC verplicht is gesteld?'),
+            field=models.CharField(blank=True, choices=[('Y', 'ja'), ('N', 'nee'), ('?', 'twijfel')], default=None, max_length=1, verbose_name='Vindt de dataverzameling plaats binnen een instelling waar toetsing door een METC verplicht is gesteld?'),
         ),
         migrations.AlterField(
             model_name='wmo',

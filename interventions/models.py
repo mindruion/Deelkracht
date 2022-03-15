@@ -35,7 +35,7 @@ class Intervention(SettingModel):
     )
 
     experimenter = models.TextField(
-        _('Wie voert de interventie uit?'),
+        _('Wie voert de interventie uit? Leg uit wat de rol en de functie van de persoon is. '),
         blank=True,
     )
 

@@ -4,7 +4,7 @@
 {% load i18n %}
 
 {% block header_title %}
-    {% trans "Het takenonderzoek" %} - {{ block.super }}
+    {% trans "Het taakonderzoek" %} - {{ block.super }}
 {% endblock %}
 
 {% block html_head %}
@@ -27,7 +27,7 @@ $(function() {
             {% endwith %}
 
             <h2>
-                {% trans "Het takenonderzoek" %}
+                {% trans "Het taakonderzoek" %}
             </h2>
             {% include "tasks/task_title.html" %}
             <form action="" method="post" enctype="multipart/form-data">{% csrf_token %}

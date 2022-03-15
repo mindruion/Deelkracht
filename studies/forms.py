@@ -101,7 +101,7 @@ class StudyForm(SoftValidationMixin, ConditionalModelForm):
         if check_necessity_required(self.proposal, age_groups, has_traits,
                                     legally_incapable):
             if not cleaned_data['necessity_reason']:
-                error = forms.ValidationError(_('Dit veld is verplicht.'),
+                error = forms.ValidationError(_('Dit veld is vereist.'),
                                               code='required')
                 self.add_error('necessity_reason', error)
 
@@ -112,13 +112,13 @@ class StudyForm(SoftValidationMixin, ConditionalModelForm):
 
         if cleaned_data['age_groups'].filter(is_adult=False).exists():
             if not 'passive_consent' in cleaned_data:
-                error = forms.ValidationError(_('Dit veld is verplicht.'),
+                error = forms.ValidationError(_('Dit veld is vereist.'),
                                               code='required')
                 self.add_error('passive_consent', error)
 
             if cleaned_data['passive_consent'] and not cleaned_data[
                 'passive_consent_details']:
-                error = forms.ValidationError(_('Dit veld is verplicht.'),
+                error = forms.ValidationError(_('Dit veld is vereist.'),
                                               code='required')
                 self.add_error('passive_consent_details', error)
 

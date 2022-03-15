@@ -424,8 +424,8 @@
 <li><strong>institution</strong> (ForeignKey to <a class="reference internal" href="#proposals.models.Institution" title="proposals.models.Institution"><code class="xref py py-class docutils literal notranslate"><span class="pre">Institution</span></code></a>) – Aan welk onderzoeksinstituut bent u verbonden?</li>
 <li><strong>date_start</strong> (<em>DateField</em>) – Wat is, indien bekend, de beoogde startdatum van uw studie?</li>
 <li><strong>title</strong> (<em>CharField</em>) – Wat is de titel van uw studie? deze titel zal worden gebruikt in alle formele correspondentie. De titel die u hier opgeeft is zichtbaar voor Deelkracht-leden en, wanneer de studie is goedgekeurd, ook voor alle medewerkers die in het archief van deze portal kijken. De titel mag niet identiek zijn aan een vorige titel van een studie die u heeft ingediend.</li>
-<li><strong>summary</strong> (<em>TextField</em>) – Geef een duidelijke, bondige beschrijving van de onderzoeksvraag of -vragen. gebruik maximaal 200 woorden.</li>
-<li><strong>other_applicants</strong> (<em>BooleanField</em>) – Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de onderzoeksinstituten icon, ofr, ogk of uil ots?</li>
+<li><strong>summary</strong> (<em>TextField</em>) – Geef een duidelijke, bondige beschrijving van het onderzoek.  Beschrijf in ieder geval het doel en de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.</li>
+<li><strong>other_applicants</strong> (<em>BooleanField</em>) – Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de bovengenoemde organisaties?</li>
 <li><strong>other_stakeholders</strong> (<em>BooleanField</em>) – Zijn er nog andere onderzoekers bij deze studie betrokken die &lt;strong&gt;niet&lt;/strong&gt; geaffilieerd zijn aan een van de onderzoeksinstituten van de faculteit geestwetenschappen van de uu?</li>
 <li><strong>stakeholders</strong> (<em>TextField</em>) – Andere betrokkenen</li>
 <li><strong>funding_details</strong> (<em>CharField</em>) – Namelijk</li>
@@ -787,7 +787,7 @@
 <dl class="attribute">
 <dt id="proposals.models.Proposal.other_applicants">
 <code class="descname">other_applicants</code><a class="headerlink" href="#proposals.models.Proposal.other_applicants" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de onderzoeksinstituten ICON, OFR, OGK of UiL OTS?</p>
+<dd><p><strong>Model field:</strong> Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de bovengenoemde organisaties?</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -922,7 +922,7 @@
 <dl class="attribute">
 <dt id="proposals.models.Proposal.summary">
 <code class="descname">summary</code><a class="headerlink" href="#proposals.models.Proposal.summary" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Geef een duidelijke, bondige beschrijving van de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.</p>
+<dd><p><strong>Model field:</strong> Geef een duidelijke, bondige beschrijving van het onderzoek.  Beschrijf in ieder geval het doel en de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.</p>
 </dd></dl>
 
 <dl class="attribute">
@@ -1087,7 +1087,7 @@
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>metc</strong> (<em>CharField</em>) – Vindt de dataverzameling plaats binnen het umc utrecht of andere instelling waar toetsing door een metc verplicht is gesteld?</li>
+<li><strong>metc</strong> (<em>CharField</em>) – Vindt de dataverzameling plaats binnen een instelling waar toetsing door een METC verplicht is gesteld?</li>
 <li><strong>metc_details</strong> (<em>TextField</em>) – Licht toe</li>
 <li><strong>metc_institution</strong> (<em>CharField</em>) – Welke instelling?</li>
 <li><strong>is_medical</strong> (<em>CharField</em>) – Is de onderzoeksvraag medisch-wetenschappelijk van aard (zoals gedefinieerd door de wmo)?. De definitie van medisch-wetenschappelijk onderzoek is: Medisch-wetenschappelijk onderzoek is onderzoek dat als doel heeft het beantwoorden van een vraag op het gebied van ziekte en gezondheid (etiologie, pathogenese, verschijnselen/symptomen, diagnose, preventie, uitkomst of behandeling van ziekte), door het op systematische wijze vergaren en bestuderen van gegevens. Het onderzoek beoogt bij te dragen aan medische kennis die ook geldend is voor populaties buiten de directe onderzoekspopulatie. (CCMO-notitie, Definitie medisch-wetenschappelijk onderzoek, 2005, ccmo.nl)</li>
@@ -1180,7 +1180,7 @@
 <dl class="attribute">
 <dt id="proposals.models.Wmo.metc">
 <code class="descname">metc</code><a class="headerlink" href="#proposals.models.Wmo.metc" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Model field:</strong> Vindt de dataverzameling plaats binnen het UMC Utrecht of andere instelling waar toetsing door een METC verplicht is gesteld?</p>
+<dd><p><strong>Model field:</strong> Vindt de dataverzameling plaats binnen een instelling waar toetsing door een METC verplicht is gesteld?</p>
 </dd></dl>
 
 <dl class="attribute">

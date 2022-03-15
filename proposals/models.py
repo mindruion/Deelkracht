@@ -109,7 +109,7 @@ class Proposal(models.Model):
     institution = models.ForeignKey(
         Institution,
         verbose_name=_(
-            'Aan welk onderzoeksinstituut bent u verbonden?'
+            'Aan welke organisatie bent u verbonden?'
         ),
         on_delete=models.PROTECT,
     )
@@ -133,7 +133,7 @@ identiek zijn aan een vorige titel van een studie die u heeft ingediend.'),
 
     summary = models.TextField(
         _(
-            'Geef een duidelijke, bondige beschrijving van de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.'
+            'Geef een duidelijke, bondige beschrijving van het onderzoek.  Beschrijf in ieder geval het doel en de onderzoeksvraag of -vragen. Gebruik maximaal 200 woorden.'
         ),
         validators=[MaxWordsValidator(SUMMARY_MAX_WORDS)],
         blank=True,
@@ -141,7 +141,7 @@ identiek zijn aan een vorige titel van een studie die u heeft ingediend.'),
 
     other_applicants = models.BooleanField(
         _(
-            'Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de onderzoeksinstituten ICON, OFR, OGK of UiL OTS?'
+            'Zijn er nog andere onderzoekers bij deze studie betrokken die geaffilieerd zijn aan één van de bovengenoemde organisaties?'
         ),
         default=False,
     )

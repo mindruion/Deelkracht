@@ -104,7 +104,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='study',
             name='traits',
-            field=models.ManyToManyField(to='studies.Trait', verbose_name='Selecteer de bijzondere kenmerken van uw proefpersonen', blank=True),
+            field=models.ManyToManyField(to='studies.Trait', verbose_name='Selecteer de bijzondere kenmerken van uw deelnemers:', blank=True),
         ),
         migrations.AlterUniqueTogether(
             name='study',
