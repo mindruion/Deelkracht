@@ -106,9 +106,6 @@ Menu.add_item(
     "main",
     MenuItem(
         _("Archief"),
-        "#",
-        slug='archive',  # needed for sub-menu!
-        children=archive_menu,
-        check=lambda x: x.user.is_authenticated,
+        reverse("proposals:archive", args=['LK']),
     )
 )
