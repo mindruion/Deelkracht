@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='proposal',
             name='other_stakeholders',
-            field=models.BooleanField(default=False, verbose_name='Zijn er nog andere onderzoekers bij deze studie betrokken die <strong>niet</strong> geaffilieerd zijn aan een van de onderzoeksinstituten van de Faculteit Geestwetenschappen van de UU? '),
+            field=models.BooleanField(default=False, verbose_name='Zijn er nog andere onderzoekers bij deze studie betrokken die <strong>niet</strong> geaffilieerd zijn aan een van bovengenoemde organisaties?'),
         ),
         migrations.AlterField(
             model_name='proposal',

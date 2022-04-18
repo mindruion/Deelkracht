@@ -216,8 +216,7 @@ te testen?'),
 (dus ook school) werft en u de ouders niet laat ondertekenen, maar in \
 plaats daarvan de leiding van die instelling, dan maakt u gebruik van \
 passieve informed consent. U kunt de templates vinden op de website van de  \
-<a href="https://Deelkracht.nl" \
-target="_blank">ETC-SACB</a>.')),
+<a href="https://Deelkracht.nl">ETC-SACB</a>.')),
         null=True,
         blank=True,
     )

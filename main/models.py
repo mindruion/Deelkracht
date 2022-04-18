@@ -78,8 +78,7 @@ van de leraar of een ander persoon die bevoegd is?'),
         _('Is de testleider in het bezit van een VOG?'),
         help_text=_('Iedereen die op een school werkt moet in het bezit \
         zijn van een Verklaring Omtrent Gedrag (VOG, zie \
-        <a href="https://www.justis.nl/producten/vog/" \
-        target="_blank">https://www.justis.nl/producten/vog/</a>). \
+        <a href="https://www.justis.nl/producten/vog/">https://www.justis.nl/producten/vog/</a>). \
         Het is de verantwoordelijkheid van de school om hierom te vragen. \
         ETC-SACB neemt hierin een adviserende rol en wil de onderzoekers \
         waarschuwen dat de school om een VOG kan vragen.'),

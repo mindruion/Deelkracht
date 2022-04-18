@@ -503,8 +503,7 @@ class Wmo(models.Model):
     )
 
     metc = models.CharField(
-        _('Vindt de dataverzameling plaats binnen het UMC Utrecht of \
-andere instelling waar toetsing door een METC verplicht is gesteld?'),
+        _('Vindt de dataverzameling plaats binnen een instelling waar toetsing door een METC verplicht is gesteld?'),
         max_length=1,
         choices=YES_NO_DOUBT,
         blank=True,
